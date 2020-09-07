@@ -10,8 +10,8 @@ import Foundation
 
 public protocol Model: Encodable {}
 
-extension Model {
-    public func convertToData() -> Data? {
+public extension Model {
+    func convertToData() -> Data? {
         return try? JSONEncoder().encode(self)
     }
 }
