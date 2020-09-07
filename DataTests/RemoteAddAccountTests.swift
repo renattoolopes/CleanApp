@@ -8,6 +8,7 @@
 
 import XCTest
 import Domain
+import Data
 
 class RemoteAddAccountTests: XCTestCase {
     let addAccountModel = AddAccountModel(name: "Renato",
@@ -31,34 +32,11 @@ class RemoteAddAccountTests: XCTestCase {
         XCTAssertNotNil(url)
         let sut: RemoteAddAccount = RemoteAddAccount(url: url!,
                                                      httpPostClient: httpClientSpy)
-        let data: Data? = convertToData(addAccountModel: addAccountModel)
-        XCTAssertNotNil(data)
         sut.add(accountModel: addAccountModel)
-        XCTAssertEqual(data, httpClientSpy.data)
+        XCTAssertEqual(httpClientSpy.data, addAccountModel.convertToData())
     }
 }
-
-extension RemoteAddAccountTests {
-    private func convertToData(addAccountModel: AddAccountModel) -> Data? {
-        return try? JSONEncoder().encode(addAccountModel)
-    }
-    
-    // User Case
-    class RemoteAddAccount {
-        var url: URL
-        var httpPostClient: HttpPostClient
-        
-        init(url: URL, httpPostClient: HttpPostClient) {
-            self.url = url
-            self.httpPostClient = httpPostClient
-        }
-        
-        func add(accountModel: AddAccountModel) {
-            let data: Data? = try? JSONEncoder().encode(accountModel)
-            self.httpPostClient.post(to: self.url, with: data)
-        }
-    }
-
+extension RemoteAddAccountTests {    
     class HttpClientSpy: HttpPostClient {
         var url: URL?
         var data: Data?
@@ -68,9 +46,4 @@ extension RemoteAddAccountTests {
             self.data = data
         }
     }
-}
-
-// MARK: - Protocols
-protocol HttpPostClient {
-    func post(to url: URL, with data: Data?)
 }
