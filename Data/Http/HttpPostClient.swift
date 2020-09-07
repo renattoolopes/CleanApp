@@ -9,5 +9,9 @@
 import Foundation
 
 public protocol HttpPostClient {
-    func post(to url: URL, with data: Data?)
+    // MARK: - Value Types
+    typealias HttpPostClientResult = (Result<Data, HttpClientError>) -> Void
+    
+    // MARK: - Methods
+    func post(to url: URL, with data: Data?, completion: @escaping HttpPostClientResult)
 }

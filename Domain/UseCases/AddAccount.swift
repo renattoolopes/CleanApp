@@ -8,9 +8,9 @@
 
 import Foundation
 
-protocol AddAccount {
+public protocol AddAccount {
     // MARK: - Type Values
-    typealias AddAccountResult = (Result<AccountModel, Error>) -> Void
+    typealias AddAccountResult = (Result<AccountModel, DomainError>) -> Void
     
     // MARK: - Methods
     func add(account: AddAccountModel, compleiton: @escaping AddAccountResult)
