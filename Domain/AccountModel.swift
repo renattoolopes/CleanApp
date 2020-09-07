@@ -8,8 +8,9 @@
 
 import Foundation
 
-struct AccountModel {
-    var id: String
-    var name: String
-    var password: String
+public struct AccountModel {
+    // MARK: - Public Properties
+    public var id: String
+    public var name: String
+    public var password: String
 }
