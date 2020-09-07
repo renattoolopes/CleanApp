@@ -16,7 +16,7 @@ protocol AddAccount {
     func add(account: AddAccountModel, compleiton: @escaping AddAccountResult)
 }
 
-public struct AddAccountModel: Encodable {
+public struct AddAccountModel: Model {
     // MARK: - Public Properties
     public var name: String
     public var email: String
