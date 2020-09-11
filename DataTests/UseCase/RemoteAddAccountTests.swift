@@ -82,18 +82,8 @@ extension RemoteAddAccountTests {
                             password: "123123")
     }
     
-    private func makeInvalidData() -> Data {
-        return Data("Invalid_data".utf8)
-    }
-    
     private func makeFakeURL() -> URL? {
         return URL(string: "https://any-url.com")
-    }
-    
-    private func checkMemoryLeak(for object: AnyObject, inFile file: StaticString = #file, andLine line: UInt = #line) {
-        addTeardownBlock { [weak object] in
-            XCTAssertNil(object, file: file, line: line)
-        }
     }
     
     private func expect(sut: RemoteAddAccount, completeWith expected: Result<AccountModel, DomainError>, whenExecute action: () -> Void) {
@@ -110,28 +100,5 @@ extension RemoteAddAccountTests {
         }
         action()
         wait(for: [expec], timeout: 1)
-
-    }
-}
-
-extension RemoteAddAccountTests {    
-    class HttpClientSpy: HttpPostClient {
-        var url: [URL] = [URL]()
-        var data: Data?
-        var completion: ((Result<Data, HttpClientError>) -> Void)?
-        
-        func post(to url: URL, with data: Data?, completion: @escaping (Result<Data, HttpClientError>) -> Void) {
-            self.url.append(url)
-            self.data = data
-            self.completion = completion
-        }
-        
-        func forceFailureWithError() {
-            completion?(.failure(.noConnectivity))
-        }
-        
-        func forceCompletWithData(_ data: Data) {
-            completion?(.success(data))
-        }
     }
 }

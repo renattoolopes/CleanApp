@@ -23,7 +23,7 @@ public final class RemoteAddAccount: AddAccount {
     // MARK: - Public Methods
     public func add(account accountModel: AddAccountModel, compleiton completion: @escaping AddAccountResult) {
         self.httpPostClient.post(to: self.url, with: accountModel.convertToData()) { [weak self] result in
-            guard let `self`: RemoteAddAccount = self else { return }
+            guard self != nil else { return }
             switch result {
             case .success(let data):
                 if let accountModel: AccountModel = data.convertToModel() {
