@@ -74,6 +74,25 @@ class RemoteAddAccountTests: XCTestCase {
         
         wait(for: [expec], timeout: 1)
     }
+    
+    func test_add_should_complete_with_account_if_client_completes_with_invalid_data() {
+        // "sut" is used to identifier which object is been tested
+        let url: URL? = URL(string: "https://any-url.com")
+        XCTAssertNotNil(url)
+        let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
+        let expec = expectation(description: "complete with error if client fails")
+        sut.add(account: addAccountModel) { result in
+            if case let Result.failure(error) = result {
+                XCTAssertEqual(error, .unexpected)
+            } else {
+                XCTFail("Expected Error")
+            }
+            expec.fulfill()
+        }
+        httpClientSpy.forceCompletWithData(Data("Invalid_data".utf8))
+        
+        wait(for: [expec], timeout: 1)
+    }
 }
 
 extension RemoteAddAccountTests {

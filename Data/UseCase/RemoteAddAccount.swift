@@ -27,6 +27,8 @@ public final class RemoteAddAccount: AddAccount {
             case .success(let data):
                 if let accountModel: AccountModel = data.convertToModel() {
                     completion(.success(accountModel))
+                } else {
+                    completion(.failure(.unexpected))
                 }
             case .failure:
                 completion(.failure(.unexpected))
