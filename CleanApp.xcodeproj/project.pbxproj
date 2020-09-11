@@ -10,6 +10,7 @@
 		FD617CCD250AFB800076E645 /* Extension+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD617CCC250AFB800076E645 /* Extension+Data.swift */; };
 		FDDC8C22250B11630023B465 /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C21250B11630023B465 /* Extension+XCTestCase.swift */; };
 		FDDC8C25250B12080023B465 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C24250B12080023B465 /* HttpClientSpy.swift */; };
+		FDDC8C28250B12CE0023B465 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C27250B12CE0023B465 /* AccountModelFactory.swift */; };
 		FDE632EA2505E8F700EDBF9C /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE632E92505E8F700EDBF9C /* AddAccount.swift */; };
 		FDE632EC2505E97E00EDBF9C /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE632EB2505E97E00EDBF9C /* AccountModel.swift */; };
 		FDE632FB2505E9E500EDBF9C /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE632F22505E9E500EDBF9C /* Data.framework */; };
@@ -58,6 +59,7 @@
 		FD617CCC250AFB800076E645 /* Extension+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Data.swift"; sourceTree = "<group>"; };
 		FDDC8C21250B11630023B465 /* Extension+XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+XCTestCase.swift"; sourceTree = "<group>"; };
 		FDDC8C24250B12080023B465 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
+		FDDC8C27250B12CE0023B465 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
 		FDE632E12505E8D200EDBF9C /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE632E42505E8D200EDBF9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDE632E92505E8F700EDBF9C /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		FD617CCB250AFB5F0076E645 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FDDC8C26250B12C30023B465 /* Factory */,
 				FD617CCE250AFB840076E645 /* Extensions */,
 			);
 			path = Helpers;
@@ -131,6 +134,14 @@
 				FDDC8C24250B12080023B465 /* HttpClientSpy.swift */,
 			);
 			path = Http;
+			sourceTree = "<group>";
+		};
+		FDDC8C26250B12C30023B465 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				FDDC8C27250B12CE0023B465 /* AccountModelFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		FDE632C72505E88E00EDBF9C = {
@@ -398,6 +409,7 @@
 				FDE633142505FB2900EDBF9C /* HttpPostClient.swift in Sources */,
 				FD617CCD250AFB800076E645 /* Extension+Data.swift in Sources */,
 				FDE6331E2506BCB300EDBF9C /* HttpClientError.swift in Sources */,
+				FDDC8C28250B12CE0023B465 /* AccountModelFactory.swift in Sources */,
 				FDE633122505FAF900EDBF9C /* RemoteAddAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

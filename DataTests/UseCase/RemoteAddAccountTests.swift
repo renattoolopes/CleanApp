@@ -75,13 +75,6 @@ extension RemoteAddAccountTests {
                                 passwordConfirmation: "123")
     }
     
-    private func makeAccountModel() -> AccountModel {
-        return AccountModel(id: "100",
-                            name: "Renato Lopes",
-                            email: "renattoolopes@gmail.com",
-                            password: "123123")
-    }
-    
     private func makeFakeURL() -> URL? {
         return URL(string: "https://any-url.com")
     }
