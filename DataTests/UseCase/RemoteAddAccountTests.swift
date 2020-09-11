@@ -47,6 +47,16 @@ class RemoteAddAccountTests: XCTestCase {
             httpClientSpy.forceCompletWithData(makeInvalidData())
         }
     }
+    
+    func test_add_should_not_complete_when_sut_is_nil() {
+        let httpClientSpy: HttpClientSpy = HttpClientSpy()
+        var sut: RemoteAddAccount? = RemoteAddAccount(url: makeFakeURL()!, httpPostClient: httpClientSpy)
+        var completionNil: Result<AccountModel,DomainError>?
+        sut?.add(account: makeAddAccountModel()) { completionNil = $0 }
+        sut = nil
+        httpClientSpy.forceFailureWithError()
+        XCTAssertNil(completionNil)
+    }
 }
 
 extension RemoteAddAccountTests {
