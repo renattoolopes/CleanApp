@@ -11,36 +11,21 @@ import Domain
 import Data
 
 class RemoteAddAccountTests: XCTestCase {
-    let addAccountModel = AddAccountModel(name: "Renato",
-                                           email: "renattoolopes@gmail.com",
-                                           password: "123",
-                                           passwordConfirmation: "123")
-    
-    let httpClientSpy: HttpClientSpy = HttpClientSpy()
-    
     func teste_add_should_httpClient_with_correct_url() {
         // "sut" is used to identifier which object is been tested
-        let url: URL? = makeFakeURL()
-        XCTAssertNotNil(url)
-        let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
-        sut.add(account: addAccountModel) { (_) in }
-        XCTAssertEqual(httpClientSpy.url, [url!])
+        let (sut, httpClientSpy) = makeSut()
+        sut.add(account: makeAddAccountModel()) { (_) in }
+        XCTAssertEqual(httpClientSpy.url, [makeFakeURL()!])
     }
     
     func teste_add_should_httpClient_with_correct_data() {
-        let url: URL? = makeFakeURL()
-        XCTAssertNotNil(url)
-        let sut: RemoteAddAccount = RemoteAddAccount(url: url!,
-                                                     httpPostClient: httpClientSpy)
-        sut.add(account: addAccountModel) { _ in }
-        XCTAssertEqual(httpClientSpy.data, addAccountModel.convertToData())
+        let (sut, httpClientSpy) = makeSut()
+        sut.add(account: makeAddAccountModel()) { _ in }
+        XCTAssertEqual(httpClientSpy.data, makeAddAccountModel().convertToData())
     }
     
     func test_add_should_complete_with_error_if_client_fails() {
-        // "sut" is used to identifier which object is been tested
-        let url: URL? = makeFakeURL()
-        XCTAssertNotNil(url)
-        let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
+        let (sut, httpClientSpy) = makeSut()
         expect(sut: sut, completeWith: .failure(.unexpected)) {
             httpClientSpy.forceFailureWithError()
         }
@@ -48,9 +33,7 @@ class RemoteAddAccountTests: XCTestCase {
     
     func test_add_should_complete_with_account_if_client_completes_with_data() {
         // "sut" is used to identifier which object is been tested
-        let url: URL? = makeFakeURL()
-        XCTAssertNotNil(url)
-        let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
+        let (sut, httpClientSpy) = makeSut()
         let expectedAccount: AccountModel = makeAccountModel()
         expect(sut: sut, completeWith: .success(expectedAccount)) {
             httpClientSpy.forceCompletWithData(expectedAccount.convertToData()!)
@@ -59,9 +42,7 @@ class RemoteAddAccountTests: XCTestCase {
     
     func test_add_should_complete_with_account_if_client_completes_with_invalid_data() {
         // "sut" is used to identifier which object is been tested
-        let url: URL? = makeFakeURL()
-        XCTAssertNotNil(url)
-        let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
+        let (sut, httpClientSpy) = makeSut()
         expect(sut: sut, completeWith: .failure(.unexpected)) {
             httpClientSpy.forceCompletWithData(makeInvalidData())
         }
@@ -69,6 +50,21 @@ class RemoteAddAccountTests: XCTestCase {
 }
 
 extension RemoteAddAccountTests {
+    private func makeSut(file: StaticString = #file, andLine line: UInt = #line) -> (sut: RemoteAddAccount, httpSpy: HttpClientSpy) {
+        let httpClientSpy: HttpClientSpy = HttpClientSpy()
+        let sut: RemoteAddAccount = RemoteAddAccount(url: makeFakeURL()!, httpPostClient: httpClientSpy)
+        checkMemoryLeak(for: sut)
+        checkMemoryLeak(for: httpClientSpy, inFile: file, andLine: line)
+        return (sut, httpClientSpy)
+    }
+    
+    private func makeAddAccountModel() -> AddAccountModel {
+        return  AddAccountModel(name: "Renato",
+                                email: "renattoolopes@gmail.com",
+                                password: "123",
+                                passwordConfirmation: "123")
+    }
+    
     private func makeAccountModel() -> AccountModel {
         return AccountModel(id: "100",
                             name: "Renato Lopes",
@@ -80,13 +76,19 @@ extension RemoteAddAccountTests {
         return Data("Invalid_data".utf8)
     }
     
-    private func makeFakeURL() -> URL {
+    private func makeFakeURL() -> URL? {
         return URL(string: "https://any-url.com")
+    }
+    
+    private func checkMemoryLeak(for object: AnyObject, inFile file: StaticString = #file, andLine line: UInt = #line) {
+        addTeardownBlock { [weak object] in
+            XCTAssertNil(object, file: file, line: line)
+        }
     }
     
     private func expect(sut: RemoteAddAccount, completeWith expected: Result<AccountModel, DomainError>, whenExecute action: () -> Void) {
         let expec = expectation(description: "complete with error if client fails")
-        sut.add(account: addAccountModel) { result in
+        sut.add(account: makeAddAccountModel()) { result in
             switch (expected, result) {
             case (.failure(let expectedError), .failure(let resultError)):
                 XCTAssertEqual(expectedError, resultError)
