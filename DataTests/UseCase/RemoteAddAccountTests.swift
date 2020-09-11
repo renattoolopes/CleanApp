@@ -41,18 +41,9 @@ class RemoteAddAccountTests: XCTestCase {
         let url: URL? = URL(string: "https://any-url.com")
         XCTAssertNotNil(url)
         let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
-        let expec = expectation(description: "complete with error if client fails")
-        sut.add(account: addAccountModel) { result in
-            if case let Result.failure(error) = result {
-                XCTAssertEqual(error, .unexpected)
-                expec.fulfill()
-            } else {
-                XCTFail("Expected DomainError")
-            }
+        expect(sut: sut, completeWith: .failure(.unexpected)) {
+            httpClientSpy.forceFailureWithError()
         }
-        httpClientSpy.forceFailureWithError()
-        
-        wait(for: [expec], timeout: 1)
     }
     
     func test_add_should_complete_with_account_if_client_completes_with_data() {
@@ -60,19 +51,10 @@ class RemoteAddAccountTests: XCTestCase {
         let url: URL? = URL(string: "https://any-url.com")
         XCTAssertNotNil(url)
         let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
-        let expec = expectation(description: "complete with error if client fails")
         let expectedAccount: AccountModel = makeAccountModel()
-        sut.add(account: addAccountModel) { result in
-            if case let Result.success(receivedAccount) = result {
-                XCTAssertEqual(receivedAccount, expectedAccount)
-            } else {
-                XCTFail("Expected DomainError")
-            }
-            expec.fulfill()
+        expect(sut: sut, completeWith: .success(expectedAccount)) {
+            httpClientSpy.forceCompletWithData(expectedAccount.convertToData()!)
         }
-        httpClientSpy.forceCompletWithData(expectedAccount.convertToData()!)
-        
-        wait(for: [expec], timeout: 1)
     }
     
     func test_add_should_complete_with_account_if_client_completes_with_invalid_data() {
@@ -80,18 +62,9 @@ class RemoteAddAccountTests: XCTestCase {
         let url: URL? = URL(string: "https://any-url.com")
         XCTAssertNotNil(url)
         let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
-        let expec = expectation(description: "complete with error if client fails")
-        sut.add(account: addAccountModel) { result in
-            if case let Result.failure(error) = result {
-                XCTAssertEqual(error, .unexpected)
-            } else {
-                XCTFail("Expected Error")
-            }
-            expec.fulfill()
+        expect(sut: sut, completeWith: .failure(.unexpected)) {
+            httpClientSpy.forceCompletWithData(Data("Invalid_data".utf8))
         }
-        httpClientSpy.forceCompletWithData(Data("Invalid_data".utf8))
-        
-        wait(for: [expec], timeout: 1)
     }
 }
 
@@ -101,6 +74,23 @@ extension RemoteAddAccountTests {
                             name: "Renato Lopes",
                             email: "renattoolopes@gmail.com",
                             password: "123123")
+    }
+    
+    private func expect(sut: RemoteAddAccount, completeWith expected: Result<AccountModel, DomainError>, whenExecute action: () -> Void) {
+        let expec = expectation(description: "complete with error if client fails")
+        sut.add(account: addAccountModel) { result in
+            switch (expected, result) {
+            case (.failure(let expectedError), .failure(let resultError)):
+                XCTAssertEqual(expectedError, resultError)
+            case (.success(let expetedAccount), .success(let resultAccount)):
+                XCTAssertEqual(expetedAccount, resultAccount)
+            default: XCTFail("Expected \(expected), but was returned \(result)")
+            }
+            expec.fulfill()
+        }
+        action()
+        wait(for: [expec], timeout: 1)
+
     }
 }
 
