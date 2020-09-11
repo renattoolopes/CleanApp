@@ -20,7 +20,7 @@ class RemoteAddAccountTests: XCTestCase {
     
     func teste_add_should_httpClient_with_correct_url() {
         // "sut" is used to identifier which object is been tested
-        let url: URL? = URL(string: "https://any-url.com")
+        let url: URL? = makeFakeURL()
         XCTAssertNotNil(url)
         let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
         sut.add(account: addAccountModel) { (_) in }
@@ -28,7 +28,7 @@ class RemoteAddAccountTests: XCTestCase {
     }
     
     func teste_add_should_httpClient_with_correct_data() {
-        let url: URL? = URL(string: "https://any-url.com")
+        let url: URL? = makeFakeURL()
         XCTAssertNotNil(url)
         let sut: RemoteAddAccount = RemoteAddAccount(url: url!,
                                                      httpPostClient: httpClientSpy)
@@ -38,7 +38,7 @@ class RemoteAddAccountTests: XCTestCase {
     
     func test_add_should_complete_with_error_if_client_fails() {
         // "sut" is used to identifier which object is been tested
-        let url: URL? = URL(string: "https://any-url.com")
+        let url: URL? = makeFakeURL()
         XCTAssertNotNil(url)
         let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
         expect(sut: sut, completeWith: .failure(.unexpected)) {
@@ -48,7 +48,7 @@ class RemoteAddAccountTests: XCTestCase {
     
     func test_add_should_complete_with_account_if_client_completes_with_data() {
         // "sut" is used to identifier which object is been tested
-        let url: URL? = URL(string: "https://any-url.com")
+        let url: URL? = makeFakeURL()
         XCTAssertNotNil(url)
         let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
         let expectedAccount: AccountModel = makeAccountModel()
@@ -59,11 +59,11 @@ class RemoteAddAccountTests: XCTestCase {
     
     func test_add_should_complete_with_account_if_client_completes_with_invalid_data() {
         // "sut" is used to identifier which object is been tested
-        let url: URL? = URL(string: "https://any-url.com")
+        let url: URL? = makeFakeURL()
         XCTAssertNotNil(url)
         let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
         expect(sut: sut, completeWith: .failure(.unexpected)) {
-            httpClientSpy.forceCompletWithData(Data("Invalid_data".utf8))
+            httpClientSpy.forceCompletWithData(makeInvalidData())
         }
     }
 }
@@ -74,6 +74,14 @@ extension RemoteAddAccountTests {
                             name: "Renato Lopes",
                             email: "renattoolopes@gmail.com",
                             password: "123123")
+    }
+    
+    private func makeInvalidData() -> Data {
+        return Data("Invalid_data".utf8)
+    }
+    
+    private func makeFakeURL() -> URL {
+        return URL(string: "https://any-url.com")
     }
     
     private func expect(sut: RemoteAddAccount, completeWith expected: Result<AccountModel, DomainError>, whenExecute action: () -> Void) {
