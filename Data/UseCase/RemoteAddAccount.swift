@@ -22,8 +22,15 @@ public final class RemoteAddAccount: AddAccount {
     
     // MARK: - Public Methods
     public func add(account accountModel: AddAccountModel, compleiton completion: @escaping AddAccountResult) {
-        self.httpPostClient.post(to: self.url, with: accountModel.convertToData()) { error in
-            completion(.failure(.unexpected))
+        self.httpPostClient.post(to: self.url, with: accountModel.convertToData()) { result in
+            switch result {
+            case .success(let data):
+                if let accountModel: AccountModel = data.convertToModel() {
+                    completion(.success(accountModel))
+                }
+            case .failure:
+                completion(.failure(.unexpected))
+            }
         }
     }
 }

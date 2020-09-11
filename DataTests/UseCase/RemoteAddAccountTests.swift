@@ -23,7 +23,7 @@ class RemoteAddAccountTests: XCTestCase {
         let url: URL? = URL(string: "https://any-url.com")
         XCTAssertNotNil(url)
         let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
-        sut.add(account: addAccountModel) { _ in }
+        sut.add(account: addAccountModel) { (_) in }
         XCTAssertEqual(httpClientSpy.url, [url!])
     }
     
@@ -54,7 +54,37 @@ class RemoteAddAccountTests: XCTestCase {
         
         wait(for: [expec], timeout: 1)
     }
+    
+    func test_add_should_complete_with_account_if_client_completes_with_data() {
+        // "sut" is used to identifier which object is been tested
+        let url: URL? = URL(string: "https://any-url.com")
+        XCTAssertNotNil(url)
+        let sut: RemoteAddAccount = RemoteAddAccount(url: url!, httpPostClient: httpClientSpy)
+        let expec = expectation(description: "complete with error if client fails")
+        let expectedAccount: AccountModel = makeAccountModel()
+        sut.add(account: addAccountModel) { result in
+            if case let Result.success(receivedAccount) = result {
+                XCTAssertEqual(receivedAccount, expectedAccount)
+            } else {
+                XCTFail("Expected DomainError")
+            }
+            expec.fulfill()
+        }
+        httpClientSpy.forceCompletWithData(expectedAccount.convertToData()!)
+        
+        wait(for: [expec], timeout: 1)
+    }
 }
+
+extension RemoteAddAccountTests {
+    private func makeAccountModel() -> AccountModel {
+        return AccountModel(id: "100",
+                            name: "Renato Lopes",
+                            email: "renattoolopes@gmail.com",
+                            password: "123123")
+    }
+}
+
 extension RemoteAddAccountTests {    
     class HttpClientSpy: HttpPostClient {
         var url: [URL] = [URL]()
@@ -69,6 +99,10 @@ extension RemoteAddAccountTests {
         
         func forceFailureWithError() {
             completion?(.failure(.noConnectivity))
+        }
+        
+        func forceCompletWithData(_ data: Data) {
+            completion?(.success(data))
         }
     }
 }
