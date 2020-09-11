@@ -75,10 +75,6 @@ extension RemoteAddAccountTests {
                                 passwordConfirmation: "123")
     }
     
-    private func makeFakeURL() -> URL? {
-        return URL(string: "https://any-url.com")
-    }
-    
     private func expect(sut: RemoteAddAccount, completeWith expected: Result<AccountModel, DomainError>, whenExecute action: () -> Void) {
         let expec = expectation(description: "complete with error if client fails")
         sut.add(account: makeAddAccountModel()) { result in
