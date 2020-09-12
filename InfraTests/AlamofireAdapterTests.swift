@@ -11,7 +11,7 @@ import Alamofire
 
 class AlamofireAdapterTests: XCTestCase {
     
-    func test_() {
+    func test_post_should_make_request_with_valid_url_and_method() {
         let url: URL = makeFakeURL()!
         let configuration: URLSessionConfiguration = .default
         configuration.protocolClasses = [URLStubProtocol.self]
@@ -21,10 +21,11 @@ class AlamofireAdapterTests: XCTestCase {
         URLStubProtocol.observerRequest { (request) in
             XCTAssertEqual(url, request.url!)
             XCTAssertEqual("POST", request.httpMethod)
+            XCTAssertNotNil(request.httpBodyStream)
             promise.fulfill()
         }
     
-        alamofireAdapter.post(to: url)
+        alamofireAdapter.post(to: url, with: makeValidData())
         wait(for: [promise], timeout: 2)
     }
 }
@@ -36,8 +37,12 @@ class AlamofireAdapter {
         self.session = session
     }
     
-    func post(to url: URL) {
-        session.request(url, method: .post).resume()
+    func post(to url: URL, with data: Data?) {
+        guard let data: Data = data,
+            let json: [String: Any] = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] else {
+                return
+        }
+        session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).resume()
     }
 }
 
