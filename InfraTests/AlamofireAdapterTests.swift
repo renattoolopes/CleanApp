@@ -13,10 +13,7 @@ class AlamofireAdapterTests: XCTestCase {
     
     func test_post_should_make_request_with_valid_url_and_method() {
         let url: URL = makeFakeURL()!
-        let configuration: URLSessionConfiguration = .default
-        configuration.protocolClasses = [URLStubProtocol.self]
-        let session: Session = Session(configuration: configuration)
-        let alamofireAdapter: AlamofireAdapter = AlamofireAdapter(session: session)
+        let alamofireAdapter: AlamofireAdapter = makeSut()
         let promise: XCTestExpectation = XCTestExpectation(description: "Waiting Request")
         URLStubProtocol.observerRequest { (request) in
             XCTAssertEqual(url, request.url!)
@@ -31,18 +28,23 @@ class AlamofireAdapterTests: XCTestCase {
     
     func test_post_should_make_request_with_invalid_data() {
         let url: URL = makeFakeURL()!
-        let configuration: URLSessionConfiguration = .default
-        configuration.protocolClasses = [URLStubProtocol.self]
-        let session: Session = Session(configuration: configuration)
-        let alamofireAdapter: AlamofireAdapter = AlamofireAdapter(session: session)
+        let alamofireAdapter: AlamofireAdapter = makeSut()
         let promise: XCTestExpectation = XCTestExpectation(description: "Waiting Request")
         URLStubProtocol.observerRequest { (request) in
             XCTAssertNil(request.httpBodyStream)
             promise.fulfill()
         }
-    
         alamofireAdapter.post(to: url, with: nil)
         wait(for: [promise], timeout: 2)
+    }
+}
+
+extension AlamofireAdapterTests {
+    func makeSut() -> AlamofireAdapter{
+        let configuration: URLSessionConfiguration = .default
+        configuration.protocolClasses = [URLStubProtocol.self]
+        let session: Session = Session(configuration: configuration)
+        return AlamofireAdapter(session: session)
     }
 }
 
