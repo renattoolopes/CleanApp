@@ -28,6 +28,22 @@ class AlamofireAdapterTests: XCTestCase {
         alamofireAdapter.post(to: url, with: makeValidData())
         wait(for: [promise], timeout: 2)
     }
+    
+    func test_post_should_make_request_with_invalid_data() {
+        let url: URL = makeFakeURL()!
+        let configuration: URLSessionConfiguration = .default
+        configuration.protocolClasses = [URLStubProtocol.self]
+        let session: Session = Session(configuration: configuration)
+        let alamofireAdapter: AlamofireAdapter = AlamofireAdapter(session: session)
+        let promise: XCTestExpectation = XCTestExpectation(description: "Waiting Request")
+        URLStubProtocol.observerRequest { (request) in
+            XCTAssertNil(request.httpBodyStream)
+            promise.fulfill()
+        }
+    
+        alamofireAdapter.post(to: url, with: nil)
+        wait(for: [promise], timeout: 2)
+    }
 }
 
 class AlamofireAdapter {
@@ -38,11 +54,13 @@ class AlamofireAdapter {
     }
     
     func post(to url: URL, with data: Data?) {
-        guard let data: Data = data,
-            let json: [String: Any] = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] else {
-                return
+        var json: [String: Any]?
+        defer {
+            session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).resume()
         }
-        session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).resume()
+        
+        guard let data: Data = data else { return }
+        json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
     }
 }
 
