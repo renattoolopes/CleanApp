@@ -14,8 +14,8 @@
             filePath = "InfraTests/AlamofireAdapterTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "URLStubProtocol"
             landmarkType = "3">
          </BreakpointContent>
@@ -30,10 +30,10 @@
             filePath = "InfraTests/AlamofireAdapterTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "post(to:with:)"
-            landmarkType = "7">
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

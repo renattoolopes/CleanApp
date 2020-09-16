@@ -9,13 +9,14 @@
 import Foundation
 import Data
 public class HttpClientSpy: HttpPostClient {
+    
     // MARK: - Public Properties
     public var url: [URL] = [URL]()
     public var data: Data?
-    public var completion: ((Result<Data, HttpClientError>) -> Void)?
+    public var completion: ((Result<Data?, HttpClientError>) -> Void)?
     
     // MARK: - Public Methods
-    public func post(to url: URL, with data: Data?, completion: @escaping (Result<Data, HttpClientError>) -> Void) {
+    public func post(to url: URL, with data: Data?, completion: @escaping (Result<Data?, HttpClientError>) -> Void) {
         self.url.append(url)
         self.data = data
         self.completion = completion

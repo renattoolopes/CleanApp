@@ -9,7 +9,12 @@
 import Foundation
 
 public extension Data {
+    typealias Json = [String: Any]
     func convertToModel<T: Decodable>() -> T? {
         return try? JSONDecoder().decode(T.self, from: self)
+    }
+    
+    func convertToJson() -> Json? {
+        return try? JSONSerialization.jsonObject(with: self, options: .allowFragments) as? [String: Any]
     }
 }

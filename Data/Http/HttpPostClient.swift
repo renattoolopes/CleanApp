@@ -10,7 +10,7 @@ import Foundation
 
 public protocol HttpPostClient {
     // MARK: - Value Types
-    typealias HttpPostClientResult = (Result<Data, HttpClientError>) -> Void
+    typealias HttpPostClientResult = (Result<Data?, HttpClientError>) -> Void
     
     // MARK: - Methods
     func post(to url: URL, with data: Data?, completion: @escaping HttpPostClientResult)
