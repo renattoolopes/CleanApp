@@ -60,6 +60,7 @@ class AlamofireAdapterTests: XCTestCase {
         self.expectResult(expectResult: .failure(.serverError), when: (data: makeValidData(), response: makeResponse(statusCode: 500), error: nil))
         self.expectResult(expectResult: .failure(.forbidden), when: (data: makeValidData(), response: makeResponse(statusCode: 403), error: nil))
         self.expectResult(expectResult: .failure(.unauthorized), when: (data: makeValidData(), response: makeResponse(statusCode: 401), error: nil))
+        self.expectResult(expectResult: .failure(.noConnectivity), when: (data: makeValidData(), response: makeResponse(statusCode: 300), error: nil))
     }
     
     func test_post_should_complete_with_non_data_when_completes_with_status_code_204() {

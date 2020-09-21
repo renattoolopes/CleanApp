@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CI.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>CleanApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,17 +17,45 @@
 		<key>Data.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Domain.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<key>Infra.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>FDDC8C2D250B14180023B465</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDDC8C35250B14180023B465</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDE632E02505E8D200EDBF9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDE632F12505E9E500EDBF9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDE632F92505E9E500EDBF9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
