@@ -277,7 +277,7 @@
 		FD61BB062518410E002376D9 /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
-				FD61BB072518410E002376D9 /* SignUpPresentationTests.swift */,
+				FD61BB19251858B1002376D9 /* Presenters */,
 				FD61BB092518410F002376D9 /* Info.plist */,
 			);
 			path = PresentationTests;
@@ -295,6 +295,14 @@
 			isa = PBXGroup;
 			children = (
 				FD61BB11251855AC002376D9 /* SignUpPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		FD61BB19251858B1002376D9 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				FD61BB072518410E002376D9 /* SignUpPresentationTests.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
