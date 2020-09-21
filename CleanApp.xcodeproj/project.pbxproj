@@ -10,6 +10,8 @@
 		FD5459842511A5C900C06B60 /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */; };
 		FD5459852511A67B00C06B60 /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */; };
 		FD617CCD250AFB800076E645 /* Extension+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD617CCC250AFB800076E645 /* Extension+Data.swift */; };
+		FDBD6632251827CE008AE445 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */; };
+		FDBD663625182955008AE445 /* URLProtocolStup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD663525182955008AE445 /* URLProtocolStup.swift */; };
 		FDDC8C22250B11630023B465 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C21250B11630023B465 /* TestFactories.swift */; };
 		FDDC8C25250B12080023B465 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C24250B12080023B465 /* HttpClientSpy.swift */; };
 		FDDC8C28250B12CE0023B465 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C27250B12CE0023B465 /* AccountModelFactory.swift */; };
@@ -92,6 +94,8 @@
 /* Begin PBXFileReference section */
 		FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+XCTestCase.swift"; sourceTree = "<group>"; };
 		FD617CCC250AFB800076E645 /* Extension+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Data.swift"; sourceTree = "<group>"; };
+		FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
+		FDBD663525182955008AE445 /* URLProtocolStup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStup.swift; sourceTree = "<group>"; };
 		FDDC8C21250B11630023B465 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		FDDC8C24250B12080023B465 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
 		FDDC8C27250B12CE0023B465 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
@@ -177,6 +181,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FDBD663325182810008AE445 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		FDBD663425182946008AE445 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				FDBD663525182955008AE445 /* URLProtocolStup.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
 		FDDC8C20250B114D0023B465 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +225,7 @@
 		FDDC8C2F250B14180023B465 /* Infra */ = {
 			isa = PBXGroup;
 			children = (
+				FDBD663325182810008AE445 /* Http */,
 				FDDC8C31250B14180023B465 /* Info.plist */,
 			);
 			path = Infra;
@@ -213,6 +234,7 @@
 		FDDC8C3A250B14180023B465 /* InfraTests */ = {
 			isa = PBXGroup;
 			children = (
+				FDBD663425182946008AE445 /* Http */,
 				FDDC8C3D250B14180023B465 /* Info.plist */,
 				FDDC8C45250B14620023B465 /* AlamofireAdapterTests.swift */,
 			);
@@ -462,6 +484,7 @@
 				TargetAttributes = {
 					FDDC8C2D250B14180023B465 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					FDDC8C35250B14180023B465 = {
 						CreatedOnToolsVersion = 11.3;
@@ -548,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDBD6632251827CE008AE445 /* AlamofireAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +581,7 @@
 			files = (
 				FD5459852511A67B00C06B60 /* Extension+XCTestCase.swift in Sources */,
 				FDDC8C4D250B15400023B465 /* TestFactories.swift in Sources */,
+				FDBD663625182955008AE445 /* URLProtocolStup.swift in Sources */,
 				FDDC8C46250B14620023B465 /* AlamofireAdapterTests.swift in Sources */,
 				FDDC8C4C250B153C0023B465 /* HttpClientSpy.swift in Sources */,
 			);
@@ -625,6 +650,7 @@
 		FDDC8C40250B14180023B465 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8NKL6XVR88;
@@ -641,6 +667,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.Infra;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -649,6 +676,7 @@
 		FDDC8C41250B14180023B465 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8NKL6XVR88;
@@ -673,6 +701,7 @@
 		FDDC8C43250B14180023B465 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8NKL6XVR88;
@@ -693,6 +722,7 @@
 		FDDC8C44250B14180023B465 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8NKL6XVR88;
