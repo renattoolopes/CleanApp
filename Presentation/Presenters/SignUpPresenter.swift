@@ -11,10 +11,12 @@ import Foundation
 public final class SignUpPresenter {
     // MARK: - Private Properties
     private var alertView: AlertView
+    private var emailValidator: EmailValidator
     
     // MARK: - Initializers
-    public init(alertView: AlertView) {
+    public init(alertView: AlertView, emailValidator: EmailValidator) {
         self.alertView = alertView
+        self.emailValidator = emailValidator
     }
     
     // MARK: - Private Methods
@@ -37,8 +39,10 @@ public final class SignUpPresenter {
     public func signUp(viewModel: SignUpViewModel) {
         guard let message: String = validate(viewModel) else { return }
         alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação",
-                                                        message: message)
-        )
+                                                        message: message))
+        guard let email: String = viewModel.email else { return }
+        let _ = emailValidator.isValid(email: email)
+
     }
 }
 
