@@ -20,5 +20,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6ABC9C36-FE30-463E-A6F7-E75F531795B1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Data/UseCase/RemoteAddAccount.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "add(account:compleiton:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6ABC9C36-FE30-463E-A6F7-E75F531795B1 - e764abd9e5a09112"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Foundation.Data&gt;, Data.HttpClientError&gt;) -&gt; () in Data.RemoteAddAccount.add(account: Domain.AddAccountModel, compleiton: (Swift.Result&lt;Domain.AccountModel, Domain.DomainError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Data"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renatolopes/Developer/MyProjects/RodrigoCurso-CleanArch/CleanApp/Data/UseCase/RemoteAddAccount.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "533">
+               </Location>
+               <Location
+                  uuid = "6ABC9C36-FE30-463E-A6F7-E75F531795B1 - e764abd9e5a09112"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Foundation.Data&gt;, Data.HttpClientError&gt;) -&gt; () in Data.RemoteAddAccount.add(account: Domain.AddAccountModel, compleiton: (Swift.Result&lt;Domain.AccountModel, Domain.DomainError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Data"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renatolopes/Developer/MyProjects/RodrigoCurso-CleanArch/CleanApp/Data/UseCase/RemoteAddAccount.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "569">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

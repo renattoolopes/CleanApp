@@ -10,6 +10,8 @@
 		FD5459842511A5C900C06B60 /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */; };
 		FD5459852511A67B00C06B60 /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */; };
 		FD617CCD250AFB800076E645 /* Extension+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD617CCC250AFB800076E645 /* Extension+Data.swift */; };
+		FD61BAE925183BA5002376D9 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE632F22505E9E500EDBF9C /* Data.framework */; };
+		FD61BAF425183C22002376D9 /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61BAF325183C22002376D9 /* AddAccountIntegrationTests.swift */; };
 		FDBD6632251827CE008AE445 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */; };
 		FDBD663625182955008AE445 /* URLProtocolStup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD663525182955008AE445 /* URLProtocolStup.swift */; };
 		FDDC8C22250B11630023B465 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C21250B11630023B465 /* TestFactories.swift */; };
@@ -36,6 +38,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FD61BAEA25183BA5002376D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDE632F12505E9E500EDBF9C;
+			remoteInfo = Data;
+		};
+		FD61BAEF25183BAE002376D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDE632E02505E8D200EDBF9C;
+			remoteInfo = Domain;
+		};
+		FD61BAF125183BAE002376D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDDC8C2D250B14180023B465;
+			remoteInfo = Infra;
+		};
 		FDDC8C38250B14180023B465 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
@@ -94,6 +117,9 @@
 /* Begin PBXFileReference section */
 		FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+XCTestCase.swift"; sourceTree = "<group>"; };
 		FD617CCC250AFB800076E645 /* Extension+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Data.swift"; sourceTree = "<group>"; };
+		FD61BAE425183BA5002376D9 /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD61BAE825183BA5002376D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD61BAF325183C22002376D9 /* AddAccountIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountIntegrationTests.swift; sourceTree = "<group>"; };
 		FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		FDBD663525182955008AE445 /* URLProtocolStup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStup.swift; sourceTree = "<group>"; };
 		FDDC8C21250B11630023B465 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
@@ -121,6 +147,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FD61BAE125183BA5002376D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD61BAE925183BA5002376D9 /* Data.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDDC8C2B250B14180023B465 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,6 +213,15 @@
 				FD617CCC250AFB800076E645 /* Extension+Data.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FD61BAE525183BA5002376D9 /* UseCasesIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD61BAE825183BA5002376D9 /* Info.plist */,
+				FD61BAF325183C22002376D9 /* AddAccountIntegrationTests.swift */,
+			);
+			path = UseCasesIntegrationTests;
 			sourceTree = "<group>";
 		};
 		FDBD663325182810008AE445 /* Http */ = {
@@ -249,6 +292,7 @@
 				FDE632FE2505E9E500EDBF9C /* DataTests */,
 				FDDC8C2F250B14180023B465 /* Infra */,
 				FDDC8C3A250B14180023B465 /* InfraTests */,
+				FD61BAE525183BA5002376D9 /* UseCasesIntegrationTests */,
 				FDE632D22505E88F00EDBF9C /* Products */,
 				FDE633092505E9EC00EDBF9C /* Frameworks */,
 			);
@@ -262,6 +306,7 @@
 				FDE632FA2505E9E500EDBF9C /* DataTests.xctest */,
 				FDDC8C2E250B14180023B465 /* Infra.framework */,
 				FDDC8C36250B14180023B465 /* InfraTests.xctest */,
+				FD61BAE425183BA5002376D9 /* UseCasesIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -375,6 +420,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		FD61BAE325183BA5002376D9 /* UseCasesIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD61BAEC25183BA5002376D9 /* Build configuration list for PBXNativeTarget "UseCasesIntegrationTests" */;
+			buildPhases = (
+				FD61BAE025183BA5002376D9 /* Sources */,
+				FD61BAE125183BA5002376D9 /* Frameworks */,
+				FD61BAE225183BA5002376D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD61BAF025183BAE002376D9 /* PBXTargetDependency */,
+				FD61BAF225183BAE002376D9 /* PBXTargetDependency */,
+				FD61BAEB25183BA5002376D9 /* PBXTargetDependency */,
+			);
+			name = UseCasesIntegrationTests;
+			productName = UseCasesIntegrationTests;
+			productReference = FD61BAE425183BA5002376D9 /* UseCasesIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FDDC8C2D250B14180023B465 /* Infra */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDDC8C3F250B14180023B465 /* Build configuration list for PBXNativeTarget "Infra" */;
@@ -482,6 +547,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Renato Lopes";
 				TargetAttributes = {
+					FD61BAE325183BA5002376D9 = {
+						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
+					};
 					FDDC8C2D250B14180023B465 = {
 						CreatedOnToolsVersion = 11.3;
 						LastSwiftMigration = 1130;
@@ -524,11 +593,19 @@
 				FDE632F92505E9E500EDBF9C /* DataTests */,
 				FDDC8C2D250B14180023B465 /* Infra */,
 				FDDC8C35250B14180023B465 /* InfraTests */,
+				FD61BAE325183BA5002376D9 /* UseCasesIntegrationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FD61BAE225183BA5002376D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDDC8C2C250B14180023B465 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -567,6 +644,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FD61BAE025183BA5002376D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD61BAF425183C22002376D9 /* AddAccountIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDDC8C2A250B14180023B465 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -624,6 +709,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FD61BAEB25183BA5002376D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDE632F12505E9E500EDBF9C /* Data */;
+			targetProxy = FD61BAEA25183BA5002376D9 /* PBXContainerItemProxy */;
+		};
+		FD61BAF025183BAE002376D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDE632E02505E8D200EDBF9C /* Domain */;
+			targetProxy = FD61BAEF25183BAE002376D9 /* PBXContainerItemProxy */;
+		};
+		FD61BAF225183BAE002376D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDDC8C2D250B14180023B465 /* Infra */;
+			targetProxy = FD61BAF125183BAE002376D9 /* PBXContainerItemProxy */;
+		};
 		FDDC8C39250B14180023B465 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDDC8C2D250B14180023B465 /* Infra */;
@@ -647,6 +747,45 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		FD61BAED25183BA5002376D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8NKL6XVR88;
+				INFOPLIST_FILE = UseCasesIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.UseCasesIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD61BAEE25183BA5002376D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8NKL6XVR88;
+				INFOPLIST_FILE = UseCasesIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.UseCasesIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FDDC8C40250B14180023B465 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1010,6 +1149,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FD61BAEC25183BA5002376D9 /* Build configuration list for PBXNativeTarget "UseCasesIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD61BAED25183BA5002376D9 /* Debug */,
+				FD61BAEE25183BA5002376D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FDDC8C3F250B14180023B465 /* Build configuration list for PBXNativeTarget "Infra" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
