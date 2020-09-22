@@ -14,14 +14,17 @@ public final class SignUpPresenter {
     private var alertView: AlertView
     private var emailValidator: EmailValidator
     private var addAccount: AddAccount
+    private var loadingView: LoadingView
     
     // MARK: - Initializers
     public init(alertView: AlertView,
                 emailValidator: EmailValidator,
-                addAccount: AddAccount) {
+                addAccount: AddAccount,
+                loadingView: LoadingView) {
         self.alertView = alertView
         self.emailValidator = emailValidator
         self.addAccount = addAccount
+        self.loadingView = loadingView
     }
     
     // MARK: - Private Methods
@@ -49,6 +52,7 @@ public final class SignUpPresenter {
                                                             message: message))
             
         } else {
+            loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             do {
             let addAccountModel: AddAccountModel = try createAddAccountModel(viewModel: viewModel)
             self.addAccount.add(account: addAccountModel) {[weak self] result in
