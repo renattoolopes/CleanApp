@@ -7,16 +7,21 @@
 //
 
 import Foundation
+import Domain
 
 public final class SignUpPresenter {
     // MARK: - Private Properties
     private var alertView: AlertView
     private var emailValidator: EmailValidator
+    private var addAccount: AddAccount
     
     // MARK: - Initializers
-    public init(alertView: AlertView, emailValidator: EmailValidator) {
+    public init(alertView: AlertView,
+                emailValidator: EmailValidator,
+                addAccount: AddAccount) {
         self.alertView = alertView
         self.emailValidator = emailValidator
+        self.addAccount = addAccount
     }
     
     // MARK: - Private Methods
@@ -39,9 +44,40 @@ public final class SignUpPresenter {
     
     // MARK: - Public Methods
     public func signUp(viewModel: SignUpViewModel) {
-        guard let message: String = validate(viewModel) else { return }
-        alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação",
-                                                        message: message))
+        if let message: String = validate(viewModel) {
+            alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação",
+                                                            message: message))
+            
+        } else {
+            do {
+            let addAccountModel: AddAccountModel = try createAddAccountModel(viewModel: viewModel)
+            self.addAccount.add(account: addAccountModel) { result in
+                switch result {
+                case .failure:
+                    let alertViewModel: AlertViewModel = AlertViewModel(title: "Error", message: "Algo inesperado aconteceu, tente novamente em alguns instantes")
+                    self.alertView.showMessage(viewModel: alertViewModel)
+                case .success:
+                    break
+                }
+            }
+
+            } catch {
+                guard error is ModelError else { return }
+                let alertModel: AlertViewModel = AlertViewModel(title: "Falha ao adicionar", message: "Não foi possível obter as inforções da conta. Entre em contato com um administrador.")
+                alertView.showMessage(viewModel: alertModel)
+            }
+        }
+    }
+    
+    // MARK: - Private Methods
+    private func createAddAccountModel(viewModel: SignUpViewModel) throws -> AddAccountModel {
+        guard let name: String = viewModel.name,
+            let email: String = viewModel.email,
+            let password: String = viewModel.password,
+            let passwordConfirmation: String = viewModel.passwordConfirmation else {
+                throw ModelError.failedConvertToModel
+        }
+        return AddAccountModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
     }
 }
 

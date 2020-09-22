@@ -17,6 +17,9 @@
 		FD61BB12251855AC002376D9 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61BB11251855AC002376D9 /* SignUpPresenter.swift */; };
 		FD61BB172518566C002376D9 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61BB162518566C002376D9 /* AlertView.swift */; };
 		FD7E3ED025196DB000E7325C /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ECF25196DB000E7325C /* EmailValidator.swift */; };
+		FD7E3ED32519842400E7325C /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ED22519842400E7325C /* AccountModelFactory.swift */; };
+		FD7E3ED42519849700E7325C /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ED22519842400E7325C /* AccountModelFactory.swift */; };
+		FD7E3ED72519880700E7325C /* ModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ED62519880700E7325C /* ModelError.swift */; };
 		FDBD6632251827CE008AE445 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */; };
 		FDBD663625182955008AE445 /* URLProtocolStup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD663525182955008AE445 /* URLProtocolStup.swift */; };
 		FDDC8C22250B11630023B465 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C21250B11630023B465 /* TestFactories.swift */; };
@@ -147,6 +150,8 @@
 		FD61BB11251855AC002376D9 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		FD61BB162518566C002376D9 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		FD7E3ECF25196DB000E7325C /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		FD7E3ED22519842400E7325C /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
+		FD7E3ED62519880700E7325C /* ModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelError.swift; sourceTree = "<group>"; };
 		FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		FDBD663525182955008AE445 /* URLProtocolStup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStup.swift; sourceTree = "<group>"; };
 		FDDC8C21250B11630023B465 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
@@ -339,6 +344,7 @@
 			children = (
 				FDDC8C21250B11630023B465 /* TestFactories.swift */,
 				FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */,
+				FD7E3ED22519842400E7325C /* AccountModelFactory.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -453,6 +459,7 @@
 			children = (
 				FDE6330F2505F95400EDBF9C /* Model.swift */,
 				FDE632EB2505E97E00EDBF9C /* AccountModel.swift */,
+				FD7E3ED62519880700E7325C /* ModelError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -831,6 +838,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7E3ED42519849700E7325C /* AccountModelFactory.swift in Sources */,
 				FD61BB082518410E002376D9 /* SignUpPresentationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -861,6 +869,7 @@
 			files = (
 				FDE633102505F95400EDBF9C /* Model.swift in Sources */,
 				FDE632EA2505E8F700EDBF9C /* AddAccount.swift in Sources */,
+				FD7E3ED72519880700E7325C /* ModelError.swift in Sources */,
 				FDE6331C2506BC5600EDBF9C /* DomainError.swift in Sources */,
 				FDE632EC2505E97E00EDBF9C /* AccountModel.swift in Sources */,
 			);
@@ -885,6 +894,7 @@
 				FD5459842511A5C900C06B60 /* Extension+XCTestCase.swift in Sources */,
 				FDDC8C22250B11630023B465 /* TestFactories.swift in Sources */,
 				FDDC8C25250B12080023B465 /* HttpClientSpy.swift in Sources */,
+				FD7E3ED32519842400E7325C /* AccountModelFactory.swift in Sources */,
 				FDE633002505E9E500EDBF9C /* RemoteAddAccountTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

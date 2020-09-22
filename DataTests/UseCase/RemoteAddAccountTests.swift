@@ -68,13 +68,6 @@ extension RemoteAddAccountTests {
         return (sut, httpClientSpy)
     }
     
-    private func makeAddAccountModel() -> AddAccountModel {
-        return  AddAccountModel(name: "Renato",
-                                email: "renattoolopes@gmail.com",
-                                password: "123",
-                                passwordConfirmation: "123")
-    }
-    
     private func expect(sut: RemoteAddAccount, completeWith expected: Result<AccountModel, DomainError>, whenExecute action: () -> Void) {
         let expec = expectation(description: "complete with error if client fails")
         sut.add(account: makeAddAccountModel()) { result in
