@@ -30,9 +30,9 @@ public final class SignUpPresenter {
         } else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation?.isEmpty ?? false  {
             return "O campo Confirmar senha é obrigatorio"
         } else if viewModel.password != viewModel.passwordConfirmation {
-            return "Falha ao Confirmar senha"
+            return "O campo Confirmar senha é inválido"
         } else if let email: String = viewModel.email, !emailValidator.isValid(email: email) {
-            return "Email inválido"
+            return "O campo Email é inválido"
         }
         return nil
     }
