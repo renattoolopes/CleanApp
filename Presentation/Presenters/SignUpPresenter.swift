@@ -31,6 +31,8 @@ public final class SignUpPresenter {
             return "O campo Confirmar senha é obrigatorio"
         } else if viewModel.password != viewModel.passwordConfirmation {
             return "Falha ao Confirmar senha"
+        } else if let email: String = viewModel.email, !emailValidator.isValid(email: email) {
+            return "Email inválido"
         }
         return nil
     }
@@ -40,9 +42,6 @@ public final class SignUpPresenter {
         guard let message: String = validate(viewModel) else { return }
         alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação",
                                                         message: message))
-        guard let email: String = viewModel.email else { return }
-        let _ = emailValidator.isValid(email: email)
-
     }
 }
 
