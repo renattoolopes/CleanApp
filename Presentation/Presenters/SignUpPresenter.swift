@@ -51,7 +51,8 @@ public final class SignUpPresenter {
         } else {
             do {
             let addAccountModel: AddAccountModel = try createAddAccountModel(viewModel: viewModel)
-            self.addAccount.add(account: addAccountModel) { result in
+            self.addAccount.add(account: addAccountModel) {[weak self] result in
+                guard let self = self else { return }
                 switch result {
                 case .failure:
                     let alertViewModel: AlertViewModel = AlertViewModel(title: "Error", message: "Algo inesperado aconteceu, tente novamente em alguns instantes")

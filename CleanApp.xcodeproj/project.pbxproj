@@ -20,6 +20,7 @@
 		FD7E3ED32519842400E7325C /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ED22519842400E7325C /* AccountModelFactory.swift */; };
 		FD7E3ED42519849700E7325C /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ED22519842400E7325C /* AccountModelFactory.swift */; };
 		FD7E3ED72519880700E7325C /* ModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ED62519880700E7325C /* ModelError.swift */; };
+		FD7E3ED825199B9000E7325C /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */; };
 		FDBD6632251827CE008AE445 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */; };
 		FDBD663625182955008AE445 /* URLProtocolStup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD663525182955008AE445 /* URLProtocolStup.swift */; };
 		FDDC8C22250B11630023B465 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C21250B11630023B465 /* TestFactories.swift */; };
@@ -838,6 +839,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7E3ED825199B9000E7325C /* Extension+XCTestCase.swift in Sources */,
 				FD7E3ED42519849700E7325C /* AccountModelFactory.swift in Sources */,
 				FD61BB082518410E002376D9 /* SignUpPresentationTests.swift in Sources */,
 			);
