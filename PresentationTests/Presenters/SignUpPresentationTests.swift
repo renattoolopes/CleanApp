@@ -11,41 +11,36 @@ import Presentation
 
 class SignUpPresentationTests: XCTestCase {
     func test_signup_should_error_message_if_name_is_not_provided() {
-        let viewModel: SignUpViewModel = SignUpViewModel(name: nil, email: "renato", password: "123", passwordConfirmation: "123")
         let alertViewSpy: AlertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy)
-        sut.signUp(viewModel: viewModel)
+        sut.signUp(viewModel: makeSignUpViewModel(name: nil))
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validação", message: "O campo Nome é obrigatorio"))
     }
     
     func test_signup_should_error_message_if_email_is_not_provided() {
-        let viewModel: SignUpViewModel = SignUpViewModel(name: "renato", email: nil, password: "123", passwordConfirmation: "123")
         let alertViewSpy: AlertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy)
-        sut.signUp(viewModel: viewModel)
+        sut.signUp(viewModel: makeSignUpViewModel(email: nil))
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validação", message: "O campo Email é obrigatorio"))
     }
     
     func test_signup_should_error_message_if_password_is_not_provided() {
-        let viewModel: SignUpViewModel = SignUpViewModel(name: "renato", email: "renattoolopes@gmail.com", password: nil, passwordConfirmation: "123")
         let alertViewSpy: AlertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy)
-        sut.signUp(viewModel: viewModel)
+        sut.signUp(viewModel: makeSignUpViewModel(password: nil))
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validação", message: "O campo Senha é obrigatorio"))
     }
     
     func test_signup_should_error_message_if_password_confirmation_is_not_provided() {
-        let viewModel: SignUpViewModel = SignUpViewModel(name: "renato", email: "renattoolopes@gmail.com", password: "123", passwordConfirmation: nil)
-        
         let alertViewSpy: AlertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy)
-        sut.signUp(viewModel: viewModel)
+        sut.signUp(viewModel: makeSignUpViewModel(passwordConfirmation: nil))
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validação", message: "O campo Confirmar senha é obrigatorio"))
     }
     
     func test_signup_should_error_message_if_password_confirmation_is_not_match() {
-        let viewModel: SignUpViewModel = SignUpViewModel(name: "renato", email: "renattoolopes@gmail.com", password: "123", passwordConfirmation: "000")
-        
+        let viewModel: SignUpViewModel = makeSignUpViewModel(password: "123",
+                                                             passwordConfirmation: "456")
         let alertViewSpy: AlertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy)
         
@@ -65,10 +60,9 @@ class SignUpPresentationTests: XCTestCase {
         let emailValidatorSpy: EmailValidatorSpy = EmailValidatorSpy()
         let alertViewSpy: AlertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy, emailValidator: emailValidatorSpy)
-        
-        let signUpViewModel: SignUpViewModel = SignUpViewModel(name: "renato", email: "invalid_email@email.com", password: "123", passwordConfirmation: "123")
         emailValidatorSpy.isValid = false
-        sut.signUp(viewModel: signUpViewModel)
+        let viewModel: SignUpViewModel = makeSignUpViewModel()
+        sut.signUp(viewModel: viewModel)
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validação", message: "Email inválido"))
     }
 }
@@ -98,5 +92,14 @@ extension SignUpPresentationTests {
     public func makeSut(alertView: AlertView = AlertViewSpy(), emailValidator: EmailValidator = EmailValidatorSpy()) -> SignUpPresenter {
         let sut: SignUpPresenter = SignUpPresenter(alertView: alertView, emailValidator: emailValidator)
         return sut
+    }
+    
+    public func makeSignUpViewModel(name: String? = "any_name",
+                               email: String? = "any_email",
+                               password: String? = "any_password",
+                               passwordConfirmation: String? = "any_password") -> SignUpViewModel {
+        
+        return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
+        
     }
 }
