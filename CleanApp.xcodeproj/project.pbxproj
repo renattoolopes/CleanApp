@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD3212E82522B51900EE0B9E /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3212E72522B51900EE0B9E /* SignUpViewModel.swift */; };
 		FD5459842511A5C900C06B60 /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */; };
 		FD5459852511A67B00C06B60 /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */; };
 		FD617CCD250AFB800076E645 /* Extension+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD617CCC250AFB800076E645 /* Extension+Data.swift */; };
@@ -139,6 +140,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD3212E72522B51900EE0B9E /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+XCTestCase.swift"; sourceTree = "<group>"; };
 		FD617CCC250AFB800076E645 /* Extension+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Data.swift"; sourceTree = "<group>"; };
 		FD61BAE425183BA5002376D9 /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +250,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD3212E62522B50700EE0B9E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				FD61BB11251855AC002376D9 /* SignUpPresenter.swift */,
+				FD3212E72522B51900EE0B9E /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		FD617CCB250AFB5F0076E645 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,7 +317,7 @@
 		FD61BB182518567A002376D9 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				FD61BB11251855AC002376D9 /* SignUpPresenter.swift */,
+				FD3212E62522B50700EE0B9E /* SignUp */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -834,6 +845,7 @@
 			files = (
 				FD61BB12251855AC002376D9 /* SignUpPresenter.swift in Sources */,
 				FD7E3EDA25199F8D00E7325C /* LoadingView.swift in Sources */,
+				FD3212E82522B51900EE0B9E /* SignUpViewModel.swift in Sources */,
 				FD61BB172518566C002376D9 /* AlertView.swift in Sources */,
 				FD7E3ED025196DB000E7325C /* EmailValidator.swift in Sources */,
 			);
