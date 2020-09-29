@@ -54,7 +54,7 @@ public final class SignUpPresenter {
         } else {
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             do {
-            let addAccountModel: AddAccountModel = try createAddAccountModel(viewModel: viewModel)
+                let addAccountModel: AddAccountModel = try SignUpMapper.createAddAccountModel(viewModel: viewModel)
             self.addAccount.add(account: addAccountModel) {[weak self] result in
                 guard let self = self else { return }
                 switch result {
@@ -74,16 +74,5 @@ public final class SignUpPresenter {
                 alertView.showMessage(viewModel: alertModel)
             }
         }
-    }
-    
-    // MARK: - Private Methods
-    private func createAddAccountModel(viewModel: SignUpViewModel) throws -> AddAccountModel {
-        guard let name: String = viewModel.name,
-            let email: String = viewModel.email,
-            let password: String = viewModel.password,
-            let passwordConfirmation: String = viewModel.passwordConfirmation else {
-                throw ModelError.failedConvertToModel
-        }
-        return AddAccountModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
     }
 }

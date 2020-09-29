@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FD3212E82522B51900EE0B9E /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3212E72522B51900EE0B9E /* SignUpViewModel.swift */; };
+		FD3212F62522B94A00EE0B9E /* SignUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3212F52522B94A00EE0B9E /* SignUpMapper.swift */; };
 		FD5459842511A5C900C06B60 /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */; };
 		FD5459852511A67B00C06B60 /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */; };
 		FD617CCD250AFB800076E645 /* Extension+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD617CCC250AFB800076E645 /* Extension+Data.swift */; };
@@ -141,6 +142,7 @@
 
 /* Begin PBXFileReference section */
 		FD3212E72522B51900EE0B9E /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		FD3212F52522B94A00EE0B9E /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
 		FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+XCTestCase.swift"; sourceTree = "<group>"; };
 		FD617CCC250AFB800076E645 /* Extension+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Data.swift"; sourceTree = "<group>"; };
 		FD61BAE425183BA5002376D9 /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +257,7 @@
 			children = (
 				FD61BB11251855AC002376D9 /* SignUpPresenter.swift */,
 				FD3212E72522B51900EE0B9E /* SignUpViewModel.swift */,
+				FD3212F52522B94A00EE0B9E /* SignUpMapper.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -844,6 +847,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD61BB12251855AC002376D9 /* SignUpPresenter.swift in Sources */,
+				FD3212F62522B94A00EE0B9E /* SignUpMapper.swift in Sources */,
 				FD7E3EDA25199F8D00E7325C /* LoadingView.swift in Sources */,
 				FD3212E82522B51900EE0B9E /* SignUpViewModel.swift in Sources */,
 				FD61BB172518566C002376D9 /* AlertView.swift in Sources */,
