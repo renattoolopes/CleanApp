@@ -153,33 +153,6 @@ class SignUpPresentationTests: XCTestCase {
 
 extension SignUpPresentationTests {
     // MARK: - Internal Class
-    class AlertViewSpy: AlertView {
-        // MARK: - Public Properties
-        public var emit: ((AlertViewModel) -> Void)?
-        
-        // MARK: - Public Methods
-        func showMessage(viewModel: AlertViewModel) {
-            self.emit?(viewModel)
-        }
-        
-        func observer(completion: @escaping (AlertViewModel) -> Void) {
-            self.emit = completion
-        }
-    }
-    
-    class EmailValidatorSpy: EmailValidator {
-        var email: String?
-        private var isValid: Bool = true
-        
-        func isValid(email: String) -> Bool {
-            self.email = email
-            return isValid
-        }
-        
-        func simulatedInvalidEmail() {
-            self.isValid = false
-        }
-    }
     
     class AddAccountSpy: AddAccount {
         public var addAccountModel: AddAccountModel?
@@ -199,18 +172,7 @@ extension SignUpPresentationTests {
         }
     }
     
-    class LoadingViewSpy: LoadingView {
-        var viewModel: LoadingViewModel?
-        var emit: ((LoadingViewModel) -> Void)?
-        
-        func observer(completion: @escaping (LoadingViewModel) -> Void) {
-            self.emit = completion
-        }
-        
-        func display(viewModel: LoadingViewModel) {
-            self.emit?(viewModel)
-        }
-    }
+
     
     // MARK: - Public Methods
     public func makeSut(alertView: AlertView = AlertViewSpy(), emailValidator: EmailValidator = EmailValidatorSpy(), addAccount: AddAccount = AddAccountSpy(), loadingView: LoadingViewSpy = LoadingViewSpy()) -> SignUpPresenter {
