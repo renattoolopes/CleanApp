@@ -48,6 +48,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FD3212D52522B36500EE0B9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDE632F12505E9E500EDBF9C;
+			remoteInfo = Data;
+		};
 		FD61BAEA25183BA5002376D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
@@ -75,13 +82,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = FD61BAF92518410E002376D9;
 			remoteInfo = Presentation;
-		};
-		FD61BB13251855FC002376D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FDE632E02505E8D200EDBF9C;
-			remoteInfo = Domain;
 		};
 		FDDC8C38250B14180023B465 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -568,7 +568,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				FD61BB14251855FC002376D9 /* PBXTargetDependency */,
+				FD3212D62522B36500EE0B9E /* PBXTargetDependency */,
 			);
 			name = Presentation;
 			productName = Presentation;
@@ -908,6 +908,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FD3212D62522B36500EE0B9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDE632F12505E9E500EDBF9C /* Data */;
+			targetProxy = FD3212D52522B36500EE0B9E /* PBXContainerItemProxy */;
+		};
 		FD61BAEB25183BA5002376D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDE632F12505E9E500EDBF9C /* Data */;
@@ -927,11 +932,6 @@
 			isa = PBXTargetDependency;
 			target = FD61BAF92518410E002376D9 /* Presentation */;
 			targetProxy = FD61BB042518410E002376D9 /* PBXContainerItemProxy */;
-		};
-		FD61BB14251855FC002376D9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FDE632E02505E8D200EDBF9C /* Domain */;
-			targetProxy = FD61BB13251855FC002376D9 /* PBXContainerItemProxy */;
 		};
 		FDDC8C39250B14180023B465 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

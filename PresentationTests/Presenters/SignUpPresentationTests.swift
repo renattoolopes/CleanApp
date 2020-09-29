@@ -9,6 +9,7 @@
 import XCTest
 import Presentation
 import Domain
+import Data
 
 class SignUpPresentationTests: XCTestCase {
     func test_signup_should_error_message_if_name_is_not_provided() {
@@ -104,7 +105,7 @@ class SignUpPresentationTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy, addAccount: addAccountSpy)
         let promise = expectation(description: "add account fails")
         alertViewSpy.observer { [weak self] (viewModel) in
-            XCTAssertEqual(viewModel, self?.makeErrorAlertViewModel(withMessage: "Algo inesperado aconteceu, tente novamente em alguns instantes"))
+            XCTAssertEqual(viewModel, self?.makeAlertViewModel(withError: true, withMessage: "Algo inesperado aconteceu, tente novamente em alguns instantes"))
             promise.fulfill()
         }
         sut.signUp(viewModel: makeSignUpViewModel())
@@ -133,6 +134,20 @@ class SignUpPresentationTests: XCTestCase {
         
         addAccountSpy.completionWithError(.unexpected)
         wait(for: [promiseHiddenLoading], timeout: 1)
+    }
+    
+    func test_singUp_should_show_success_message_if_addAccount_succeeds() {
+        let alertViewSpy: AlertViewSpy = AlertViewSpy()
+        let addAccountSpy: AddAccountSpy = AddAccountSpy()
+        let sut = makeSut(alertView: alertViewSpy, addAccount: addAccountSpy)
+        let promise = expectation(description: "add account")
+        alertViewSpy.observer { [weak self] (viewModel) in
+            XCTAssertEqual(viewModel, self?.makeAlertViewModel(withMessage: "Conta criada com sucesso!"))
+            promise.fulfill()
+        }
+        sut.signUp(viewModel: makeSignUpViewModel())
+        addAccountSpy.completeWithAccountSpy(makeAccountModel())
+        wait(for: [promise], timeout: 1)
     }
 }
 
@@ -178,6 +193,10 @@ extension SignUpPresentationTests {
         func completionWithError(_ error: DomainError) {
             self.compleiton?(.failure(error))
         }
+        
+        func completeWithAccountSpy(_ account: AccountModel) {
+            self.compleiton?(.success(account))
+        }
     }
     
     class LoadingViewSpy: LoadingView {
@@ -220,7 +239,11 @@ extension SignUpPresentationTests {
                               message: "O campo \(withField) é inválido")
     }
     
-    public func makeErrorAlertViewModel(withMessage message: String) -> AlertViewModel {
-        return AlertViewModel(title: "Error", message: message)
+    public func makeAlertViewModel(withError: Bool = false, withMessage message: String) -> AlertViewModel {
+        if withError {
+            return AlertViewModel(title: "Erro", message: message)
+        } else {
+            return AlertViewModel(title: "Sucesso", message: message)
+        }
     }
 }
