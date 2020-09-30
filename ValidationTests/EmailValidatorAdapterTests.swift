@@ -7,11 +7,11 @@
 //
 
 import XCTest
-import Presentation
+import Validation
 
 class EmailValidatorAdapterTests: XCTestCase {
     func test_invalid_emails() {
-        let sut = EmailValidatorAdapter()
+        let sut: EmailValidatorAdapter = makeSut()
         XCTAssertFalse(sut.isValid(email: ""))
         XCTAssertFalse(sut.isValid(email: "rr"))
         XCTAssertFalse(sut.isValid(email: "rr@"))
@@ -19,15 +19,20 @@ class EmailValidatorAdapterTests: XCTestCase {
         XCTAssertFalse(sut.isValid(email: "rr@rr."))
         XCTAssertFalse(sut.isValid(email: "@rr.com"))
     }
+    
+    func test_valid_emails() {
+        let sut: EmailValidatorAdapter = makeSut()
+        XCTAssertTrue(sut.isValid(email: "renato@gmail.com"))
+        XCTAssertTrue(sut.isValid(email: "renato@hotmail.com"))
+        XCTAssertTrue(sut.isValid(email: "renato@outlook.com"))
+        XCTAssertTrue(sut.isValid(email: "renato@hotmail.com"))
+        XCTAssertTrue(sut.isValid(email: "renato@testing.com"))
+    }
 }
 
 
-public final class EmailValidatorAdapter: EmailValidator {
-    private let pattern: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-    
-    public func isValid(email: String) -> Bool {
-        let range = NSRange(location: 0, length: email.utf8.count)
-        let regex = try? NSRegularExpression(pattern: pattern)
-        return regex?.firstMatch(in: email, range: range) != nil
+extension EmailValidatorAdapterTests {
+    func makeSut() -> EmailValidatorAdapter {
+        return EmailValidatorAdapter()
     }
 }
