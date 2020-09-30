@@ -27,6 +27,7 @@
 		FD7E3ED72519880700E7325C /* ModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ED62519880700E7325C /* ModelError.swift */; };
 		FD7E3ED825199B9000E7325C /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */; };
 		FD7E3EDA25199F8D00E7325C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ED925199F8D00E7325C /* LoadingView.swift */; };
+		FD9F021A2525439C0048D3A4 /* Storyborded.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9F02192525439C0048D3A4 /* Storyborded.swift */; };
 		FDA80A30252408F3008C690D /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A2F252408F3008C690D /* AddAccountSpy.swift */; };
 		FDA80A3F252409D4008C690D /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A3E252409D4008C690D /* TestFactories.swift */; };
 		FDA80A5A25240C99008C690D /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA80A5125240C99008C690D /* UI.framework */; };
@@ -187,6 +188,7 @@
 		FD7E3ED22519842400E7325C /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
 		FD7E3ED62519880700E7325C /* ModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelError.swift; sourceTree = "<group>"; };
 		FD7E3ED925199F8D00E7325C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FD9F02192525439C0048D3A4 /* Storyborded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyborded.swift; sourceTree = "<group>"; };
 		FDA80A2F252408F3008C690D /* AddAccountSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
 		FDA80A3E252409D4008C690D /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		FDA80A5125240C99008C690D /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -505,6 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				FDA80B0025243354008C690D /* UIViewController+Extension.swift */,
+				FD9F02192525439C0048D3A4 /* Storyborded.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1116,6 +1119,7 @@
 			files = (
 				FDA80B0125243354008C690D /* UIViewController+Extension.swift in Sources */,
 				FDA80ABD252413CC008C690D /* SignUpViewController.swift in Sources */,
+				FD9F021A2525439C0048D3A4 /* Storyborded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

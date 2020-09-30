@@ -16,7 +16,7 @@ protocol SignUpEventsProtocol {
     var loading: () -> Void { get }
 }
 
-final class SignUpViewController: UIViewController {
+final class SignUpViewController: UIViewController, Storyborded {
     // MARK: - Outlets
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!

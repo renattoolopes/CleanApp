@@ -19,6 +19,7 @@ extension UIViewController {
         }
         let gesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         gesture.name = keyName
+        gesture.cancelsTouchesInView = false
         view.addGestureRecognizer(gesture)
     }
     
