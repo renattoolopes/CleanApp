@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,32 +20,37 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Cwm-AJ-Q2G">
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mag-3T-2mr">
-                                <rect key="frame" x="182" y="587" width="43" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Salvar"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mag-3T-2mr">
+                                <rect key="frame" x="32" y="400" width="350" height="40"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Salvar">
+                                    <color key="titleColor" red="0.18823686240000001" green="0.18823254110000001" blue="0.1882354319" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zyg-WF-U58" userLabel="nameTextField">
-                                <rect key="frame" x="159" y="105" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zyg-WF-U58" userLabel="nameTextField">
+                                <rect key="frame" x="16" y="184" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNb-cE-Ke4" userLabel="emailTextField">
-                                <rect key="frame" x="159" y="170" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNb-cE-Ke4" userLabel="emailTextField">
+                                <rect key="frame" x="16" y="234" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HMH-uc-rpO" userLabel="passwordTextField">
-                                <rect key="frame" x="159" y="232" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HMH-uc-rpO" userLabel="passwordTextField">
+                                <rect key="frame" x="16" y="284" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVf-Co-XjR" userLabel="passwordConfirmationTextField">
-                                <rect key="frame" x="159" y="294" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlN-qc-V5H">
+                                <rect key="frame" x="158.5" y="60" width="97" height="108"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmação da senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVf-Co-XjR" userLabel="passwordConfirmationTextField">
+                                <rect key="frame" x="16" y="334" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -53,7 +59,24 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cwm-AJ-Q2G" firstAttribute="centerX" secondItem="hZG-X1-12T" secondAttribute="centerX" id="4aE-M6-6Mp"/>
+                            <constraint firstItem="HMH-uc-rpO" firstAttribute="leading" secondItem="yJT-qv-TjW" secondAttribute="leading" constant="16" id="9jK-wa-36D"/>
+                            <constraint firstItem="yJT-qv-TjW" firstAttribute="trailing" secondItem="Zyg-WF-U58" secondAttribute="trailing" constant="16" id="ANf-O0-oYL"/>
+                            <constraint firstItem="ZVf-Co-XjR" firstAttribute="leading" secondItem="yJT-qv-TjW" secondAttribute="leading" constant="16" id="DRa-YD-bkN"/>
+                            <constraint firstItem="Mag-3T-2mr" firstAttribute="top" secondItem="ZVf-Co-XjR" secondAttribute="bottom" constant="32" id="GFz-qH-gW3"/>
+                            <constraint firstItem="Mag-3T-2mr" firstAttribute="leading" secondItem="yJT-qv-TjW" secondAttribute="leading" constant="32" id="J7e-eK-xuv"/>
+                            <constraint firstItem="zlN-qc-V5H" firstAttribute="centerX" secondItem="hZG-X1-12T" secondAttribute="centerX" id="Kwx-yl-19O"/>
+                            <constraint firstItem="yJT-qv-TjW" firstAttribute="trailing" secondItem="oNb-cE-Ke4" secondAttribute="trailing" constant="16" id="QlA-df-v0h"/>
+                            <constraint firstItem="yJT-qv-TjW" firstAttribute="trailing" secondItem="ZVf-Co-XjR" secondAttribute="trailing" constant="16" id="TM3-cX-kV3"/>
+                            <constraint firstItem="oNb-cE-Ke4" firstAttribute="top" secondItem="Zyg-WF-U58" secondAttribute="bottom" constant="16" id="U2t-nf-WKn"/>
+                            <constraint firstItem="ZVf-Co-XjR" firstAttribute="top" secondItem="HMH-uc-rpO" secondAttribute="bottom" constant="16" id="adV-GB-9pv"/>
+                            <constraint firstItem="oNb-cE-Ke4" firstAttribute="leading" secondItem="yJT-qv-TjW" secondAttribute="leading" constant="16" id="bDH-tO-w9m"/>
+                            <constraint firstItem="Zyg-WF-U58" firstAttribute="leading" secondItem="yJT-qv-TjW" secondAttribute="leading" constant="16" id="cE9-Gz-a57"/>
                             <constraint firstItem="Cwm-AJ-Q2G" firstAttribute="centerY" secondItem="hZG-X1-12T" secondAttribute="centerY" id="cLd-GN-NiD"/>
+                            <constraint firstItem="yJT-qv-TjW" firstAttribute="trailing" secondItem="HMH-uc-rpO" secondAttribute="trailing" constant="16" id="f52-dq-Kin"/>
+                            <constraint firstItem="Zyg-WF-U58" firstAttribute="top" secondItem="zlN-qc-V5H" secondAttribute="bottom" constant="16" id="hwM-uj-R9z"/>
+                            <constraint firstItem="yJT-qv-TjW" firstAttribute="trailing" secondItem="Mag-3T-2mr" secondAttribute="trailing" constant="32" id="rSG-vH-mR8"/>
+                            <constraint firstItem="zlN-qc-V5H" firstAttribute="top" secondItem="yJT-qv-TjW" secondAttribute="top" constant="16" id="rgE-lr-Y0q"/>
+                            <constraint firstItem="HMH-uc-rpO" firstAttribute="top" secondItem="oNb-cE-Ke4" secondAttribute="bottom" constant="16" id="zBd-5p-mcU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -67,7 +90,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43D-Bs-3a2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-761" y="140"/>
+            <point key="canvasLocation" x="-1097.1014492753625" y="174.77678571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
