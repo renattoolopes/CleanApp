@@ -439,9 +439,8 @@
 		FDA80A5225240C99008C690D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FDA80ADA2524299B008C690D /* Scenes */,
 				FDA80A5425240C99008C690D /* Info.plist */,
-				FDA80ABC252413CC008C690D /* SignUpViewController.swift */,
-				FDA80AC62524155D008C690D /* SignUp.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -449,10 +448,43 @@
 		FDA80A5D25240C99008C690D /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				FDA80A5E25240C99008C690D /* SignUpViewControllerTests.swift */,
+				FDA80ADB252429A6008C690D /* Scenes */,
 				FDA80A6025240C99008C690D /* Info.plist */,
 			);
 			path = UITests;
+			sourceTree = "<group>";
+		};
+		FDA80AD82524295B008C690D /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				FDA80ABC252413CC008C690D /* SignUpViewController.swift */,
+				FDA80AC62524155D008C690D /* SignUp.storyboard */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		FDA80AD925242969008C690D /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				FDA80A5E25240C99008C690D /* SignUpViewControllerTests.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		FDA80ADA2524299B008C690D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FDA80AD82524295B008C690D /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FDA80ADB252429A6008C690D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FDA80AD925242969008C690D /* SignUp */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		FDBD663325182810008AE445 /* Http */ = {
