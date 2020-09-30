@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  SignUpViewControllerTests.swift
 //  UITests
 //
 //  Created by Renato Lopes on 29/09/20.
@@ -9,7 +9,7 @@
 import XCTest
 import Presentation
 
-class SignUpViewController: XCTestCase {
+class SignUpViewControllerTests: XCTestCase {
 
     func test_() { }
     
