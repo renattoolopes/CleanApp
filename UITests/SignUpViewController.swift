@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import UI
+import Presentation
 
 class SignUpViewController: XCTestCase {
 

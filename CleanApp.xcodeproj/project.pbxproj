@@ -57,13 +57,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FD3212D52522B36500EE0B9E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FDE632F12505E9E500EDBF9C;
-			remoteInfo = Data;
-		};
 		FD61BAEA25183BA5002376D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
@@ -98,6 +91,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = FDA80A5025240C99008C690D;
 			remoteInfo = UI;
+		};
+		FDA80A9025240E09008C690D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD61BAF92518410E002376D9;
+			remoteInfo = Presentation;
+		};
+		FDA80A9A25240FF8008C690D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDE632E02505E8D200EDBF9C;
+			remoteInfo = Domain;
 		};
 		FDDC8C38250B14180023B465 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -694,7 +701,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				FD3212D62522B36500EE0B9E /* PBXTargetDependency */,
+				FDA80A9B25240FF8008C690D /* PBXTargetDependency */,
 			);
 			name = Presentation;
 			productName = Presentation;
@@ -731,6 +738,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FDA80A9125240E09008C690D /* PBXTargetDependency */,
 			);
 			name = UI;
 			productName = UI;
@@ -1114,11 +1122,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FD3212D62522B36500EE0B9E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FDE632F12505E9E500EDBF9C /* Data */;
-			targetProxy = FD3212D52522B36500EE0B9E /* PBXContainerItemProxy */;
-		};
 		FD61BAEB25183BA5002376D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDE632F12505E9E500EDBF9C /* Data */;
@@ -1143,6 +1146,16 @@
 			isa = PBXTargetDependency;
 			target = FDA80A5025240C99008C690D /* UI */;
 			targetProxy = FDA80A5B25240C99008C690D /* PBXContainerItemProxy */;
+		};
+		FDA80A9125240E09008C690D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD61BAF92518410E002376D9 /* Presentation */;
+			targetProxy = FDA80A9025240E09008C690D /* PBXContainerItemProxy */;
+		};
+		FDA80A9B25240FF8008C690D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDE632E02505E8D200EDBF9C /* Domain */;
+			targetProxy = FDA80A9A25240FF8008C690D /* PBXContainerItemProxy */;
 		};
 		FDDC8C39250B14180023B465 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1181,6 +1194,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.UseCasesIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1201,6 +1215,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.UseCasesIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1226,6 +1241,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.Presentation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1252,6 +1268,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.Presentation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1271,6 +1288,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.PresentationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1290,6 +1308,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.PresentationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1318,6 +1337,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1345,6 +1365,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1366,6 +1387,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1387,6 +1409,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1411,6 +1434,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.Infra;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1437,6 +1461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.Infra;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1457,6 +1482,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.InfraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1478,6 +1504,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.InfraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1626,6 +1653,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1654,6 +1682,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1681,6 +1710,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.Data;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1709,6 +1739,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.Data;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1729,6 +1760,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1748,6 +1780,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
