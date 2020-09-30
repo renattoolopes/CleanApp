@@ -39,12 +39,17 @@ final class SignUpViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure()
+        configureActions()
+        style()
     }
     
     // MARK: - Private Methods
-    private func configure() {
+    private func configureActions() {
         saveButton.addTarget(self, action: #selector(saveButtonTap), for: .touchUpInside)
+    }
+    
+    private func style() {
+        saveButton.layer.cornerRadius = 0.8
     }
     
     @objc
