@@ -28,6 +28,8 @@
 		FD7E3ED825199B9000E7325C /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */; };
 		FD7E3EDA25199F8D00E7325C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ED925199F8D00E7325C /* LoadingView.swift */; };
 		FD9F021A2525439C0048D3A4 /* Storyborded.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9F02192525439C0048D3A4 /* Storyborded.swift */; };
+		FD9F023125254E120048D3A4 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9F022825254E110048D3A4 /* Validation.framework */; };
+		FD9F023625254E120048D3A4 /* EmailValidatorAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9F023525254E120048D3A4 /* EmailValidatorAdapterTests.swift */; };
 		FDA80A30252408F3008C690D /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A2F252408F3008C690D /* AddAccountSpy.swift */; };
 		FDA80A3F252409D4008C690D /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A3E252409D4008C690D /* TestFactories.swift */; };
 		FDA80A5A25240C99008C690D /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA80A5125240C99008C690D /* UI.framework */; };
@@ -89,6 +91,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = FD61BAF92518410E002376D9;
 			remoteInfo = Presentation;
+		};
+		FD9F023225254E120048D3A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD9F022725254E110048D3A4;
+			remoteInfo = Validation;
 		};
 		FDA80A5B25240C99008C690D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -189,6 +198,11 @@
 		FD7E3ED62519880700E7325C /* ModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelError.swift; sourceTree = "<group>"; };
 		FD7E3ED925199F8D00E7325C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FD9F02192525439C0048D3A4 /* Storyborded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyborded.swift; sourceTree = "<group>"; };
+		FD9F022825254E110048D3A4 /* Validation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD9F022B25254E110048D3A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD9F023025254E120048D3A4 /* ValidationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValidationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD9F023525254E120048D3A4 /* EmailValidatorAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterTests.swift; sourceTree = "<group>"; };
+		FD9F023725254E120048D3A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDA80A2F252408F3008C690D /* AddAccountSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
 		FDA80A3E252409D4008C690D /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		FDA80A5125240C99008C690D /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +261,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD61BB032518410E002376D9 /* Presentation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD9F022525254E110048D3A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD9F022D25254E120048D3A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD9F023125254E120048D3A4 /* Validation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +455,23 @@
 			name = Validators;
 			sourceTree = "<group>";
 		};
+		FD9F022925254E110048D3A4 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				FD9F022B25254E110048D3A4 /* Info.plist */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		FD9F023425254E120048D3A4 /* ValidationTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD9F023525254E120048D3A4 /* EmailValidatorAdapterTests.swift */,
+				FD9F023725254E120048D3A4 /* Info.plist */,
+			);
+			path = ValidationTests;
+			sourceTree = "<group>";
+		};
 		FDA80A2E252408DC008C690D /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +632,8 @@
 				FD61BB062518410E002376D9 /* PresentationTests */,
 				FDA80A5225240C99008C690D /* UI */,
 				FDA80A5D25240C99008C690D /* UITests */,
+				FD9F022925254E110048D3A4 /* Validation */,
+				FD9F023425254E120048D3A4 /* ValidationTests */,
 				FDE632D22505E88F00EDBF9C /* Products */,
 				FDE633092505E9EC00EDBF9C /* Frameworks */,
 			);
@@ -604,6 +652,8 @@
 				FD61BB022518410E002376D9 /* PresentationTests.xctest */,
 				FDA80A5125240C99008C690D /* UI.framework */,
 				FDA80A5925240C99008C690D /* UITests.xctest */,
+				FD9F022825254E110048D3A4 /* Validation.framework */,
+				FD9F023025254E120048D3A4 /* ValidationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -701,6 +751,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD9F022325254E110048D3A4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDA80A4C25240C99008C690D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -787,6 +844,42 @@
 			name = PresentationTests;
 			productName = PresentationTests;
 			productReference = FD61BB022518410E002376D9 /* PresentationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD9F022725254E110048D3A4 /* Validation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD9F023925254E120048D3A4 /* Build configuration list for PBXNativeTarget "Validation" */;
+			buildPhases = (
+				FD9F022325254E110048D3A4 /* Headers */,
+				FD9F022425254E110048D3A4 /* Sources */,
+				FD9F022525254E110048D3A4 /* Frameworks */,
+				FD9F022625254E110048D3A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Validation;
+			productName = Validation;
+			productReference = FD9F022825254E110048D3A4 /* Validation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FD9F022F25254E120048D3A4 /* ValidationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD9F023C25254E120048D3A4 /* Build configuration list for PBXNativeTarget "ValidationTests" */;
+			buildPhases = (
+				FD9F022C25254E120048D3A4 /* Sources */,
+				FD9F022D25254E120048D3A4 /* Frameworks */,
+				FD9F022E25254E120048D3A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD9F023325254E120048D3A4 /* PBXTargetDependency */,
+			);
+			name = ValidationTests;
+			productName = ValidationTests;
+			productReference = FD9F023025254E120048D3A4 /* ValidationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		FDA80A5025240C99008C690D /* UI */ = {
@@ -944,6 +1037,12 @@
 					FD61BB012518410E002376D9 = {
 						CreatedOnToolsVersion = 11.3;
 					};
+					FD9F022725254E110048D3A4 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					FD9F022F25254E120048D3A4 = {
+						CreatedOnToolsVersion = 12.0;
+					};
 					FDA80A5025240C99008C690D = {
 						CreatedOnToolsVersion = 12.0;
 						LastSwiftMigration = 1200;
@@ -998,6 +1097,8 @@
 				FD61BB012518410E002376D9 /* PresentationTests */,
 				FDA80A5025240C99008C690D /* UI */,
 				FDA80A5825240C99008C690D /* UITests */,
+				FD9F022725254E110048D3A4 /* Validation */,
+				FD9F022F25254E120048D3A4 /* ValidationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1018,6 +1119,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FD61BB002518410E002376D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD9F022625254E110048D3A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD9F022E25254E120048D3A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1110,6 +1225,21 @@
 				FD3213242522BAC500EE0B9E /* EmailValidatorSpy.swift in Sources */,
 				FDA80A3F252409D4008C690D /* TestFactories.swift in Sources */,
 				FD61BB082518410E002376D9 /* SignUpPresentationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD9F022425254E110048D3A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD9F022C25254E120048D3A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD9F023625254E120048D3A4 /* EmailValidatorAdapterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1210,6 +1340,11 @@
 			isa = PBXTargetDependency;
 			target = FD61BAF92518410E002376D9 /* Presentation */;
 			targetProxy = FD61BB042518410E002376D9 /* PBXContainerItemProxy */;
+		};
+		FD9F023325254E120048D3A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD9F022725254E110048D3A4 /* Validation */;
+			targetProxy = FD9F023225254E120048D3A4 /* PBXContainerItemProxy */;
 		};
 		FDA80A5C25240C99008C690D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1380,6 +1515,102 @@
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FD9F023A25254E120048D3A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8NKL6XVR88;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Validation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.Validation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FD9F023B25254E120048D3A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8NKL6XVR88;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Validation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.Validation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FD9F023D25254E120048D3A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8NKL6XVR88;
+				INFOPLIST_FILE = ValidationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.ValidationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FD9F023E25254E120048D3A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8NKL6XVR88;
+				INFOPLIST_FILE = ValidationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.ValidationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1888,6 +2119,24 @@
 			buildConfigurations = (
 				FD61BB0F2518410F002376D9 /* Debug */,
 				FD61BB102518410F002376D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD9F023925254E120048D3A4 /* Build configuration list for PBXNativeTarget "Validation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD9F023A25254E120048D3A4 /* Debug */,
+				FD9F023B25254E120048D3A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD9F023C25254E120048D3A4 /* Build configuration list for PBXNativeTarget "ValidationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD9F023D25254E120048D3A4 /* Debug */,
+				FD9F023E25254E120048D3A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
