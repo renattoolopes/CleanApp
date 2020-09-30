@@ -13,6 +13,7 @@ import UIKit
 
 protocol SignUpEventsProtocol {
     var signUp: ((SignUpViewModel) -> Void)? { get set }
+    var loading: () -> Void { get }
 }
 
 final class SignUpViewController: UIViewController {
@@ -26,6 +27,16 @@ final class SignUpViewController: UIViewController {
 
     // MARK: - Reactive Actions
     var signUp: ((SignUpViewModel) -> Void)?
+    lazy var loading: (_ isLoading: Bool ) -> Void = { [weak self] isLoading in
+        
+        guard let self: SignUpViewController = self else { return }
+        if isLoading {
+            self.loadingIndicator?.startAnimating()
+        } else {
+            self.loadingIndicator?.stopAnimating()
+        }
+        self.view.isUserInteractionEnabled = !isLoading
+    }
     
     // MARK: - Private Properties
     private lazy var signUpViewModel: SignUpViewModel = {
@@ -61,11 +72,7 @@ final class SignUpViewController: UIViewController {
 // MARK: - LoadingView Extension
 extension SignUpViewController: LoadingView {
     public func display(viewModel: LoadingViewModel) {
-        if viewModel.isLoading {
-            loadingIndicator?.startAnimating()
-        } else {
-            loadingIndicator?.stopAnimating()
-        }
+        loading(viewModel.isLoading)
     }
 }
 
