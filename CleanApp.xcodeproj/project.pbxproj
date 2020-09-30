@@ -29,6 +29,8 @@
 		FD7E3EDA25199F8D00E7325C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ED925199F8D00E7325C /* LoadingView.swift */; };
 		FDA80A30252408F3008C690D /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A2F252408F3008C690D /* AddAccountSpy.swift */; };
 		FDA80A3F252409D4008C690D /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A3E252409D4008C690D /* TestFactories.swift */; };
+		FDA80A5A25240C99008C690D /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA80A5125240C99008C690D /* UI.framework */; };
+		FDA80A5F25240C99008C690D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A5E25240C99008C690D /* SignUpViewController.swift */; };
 		FDBD6632251827CE008AE445 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */; };
 		FDBD663625182955008AE445 /* URLProtocolStup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD663525182955008AE445 /* URLProtocolStup.swift */; };
 		FDDC8C22250B11630023B465 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C21250B11630023B465 /* TestFactories.swift */; };
@@ -89,6 +91,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = FD61BAF92518410E002376D9;
 			remoteInfo = Presentation;
+		};
+		FDA80A5B25240C99008C690D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDA80A5025240C99008C690D;
+			remoteInfo = UI;
 		};
 		FDDC8C38250B14180023B465 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -169,6 +178,11 @@
 		FD7E3ED925199F8D00E7325C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FDA80A2F252408F3008C690D /* AddAccountSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
 		FDA80A3E252409D4008C690D /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
+		FDA80A5125240C99008C690D /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDA80A5425240C99008C690D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDA80A5925240C99008C690D /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDA80A5E25240C99008C690D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FDA80A6025240C99008C690D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		FDBD663525182955008AE445 /* URLProtocolStup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStup.swift; sourceTree = "<group>"; };
 		FDDC8C21250B11630023B465 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
@@ -216,6 +230,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD61BB032518410E002376D9 /* Presentation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA80A4E25240C99008C690D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA80A5625240C99008C690D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA80A5A25240C99008C690D /* UI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +425,23 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		FDA80A5225240C99008C690D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FDA80A5425240C99008C690D /* Info.plist */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FDA80A5D25240C99008C690D /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				FDA80A5E25240C99008C690D /* SignUpViewController.swift */,
+				FDA80A6025240C99008C690D /* Info.plist */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
 		FDBD663325182810008AE445 /* Http */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +514,8 @@
 				FD61BAE525183BA5002376D9 /* UseCasesIntegrationTests */,
 				FD61BAFB2518410E002376D9 /* Presentation */,
 				FD61BB062518410E002376D9 /* PresentationTests */,
+				FDA80A5225240C99008C690D /* UI */,
+				FDA80A5D25240C99008C690D /* UITests */,
 				FDE632D22505E88F00EDBF9C /* Products */,
 				FDE633092505E9EC00EDBF9C /* Frameworks */,
 			);
@@ -484,6 +532,8 @@
 				FD61BAE425183BA5002376D9 /* UseCasesIntegrationTests.xctest */,
 				FD61BAFA2518410E002376D9 /* Presentation.framework */,
 				FD61BB022518410E002376D9 /* PresentationTests.xctest */,
+				FDA80A5125240C99008C690D /* UI.framework */,
+				FDA80A5925240C99008C690D /* UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -581,6 +631,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDA80A4C25240C99008C690D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDDC8C29250B14180023B465 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -660,6 +717,42 @@
 			name = PresentationTests;
 			productName = PresentationTests;
 			productReference = FD61BB022518410E002376D9 /* PresentationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FDA80A5025240C99008C690D /* UI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDA80A6225240C99008C690D /* Build configuration list for PBXNativeTarget "UI" */;
+			buildPhases = (
+				FDA80A4C25240C99008C690D /* Headers */,
+				FDA80A4D25240C99008C690D /* Sources */,
+				FDA80A4E25240C99008C690D /* Frameworks */,
+				FDA80A4F25240C99008C690D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UI;
+			productName = UI;
+			productReference = FDA80A5125240C99008C690D /* UI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FDA80A5825240C99008C690D /* UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDA80A6525240C99008C690D /* Build configuration list for PBXNativeTarget "UITests" */;
+			buildPhases = (
+				FDA80A5525240C99008C690D /* Sources */,
+				FDA80A5625240C99008C690D /* Frameworks */,
+				FDA80A5725240C99008C690D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDA80A5C25240C99008C690D /* PBXTargetDependency */,
+			);
+			name = UITests;
+			productName = UITests;
+			productReference = FDA80A5925240C99008C690D /* UITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		FDDC8C2D250B14180023B465 /* Infra */ = {
@@ -765,7 +858,7 @@
 		FDE632C82505E88E00EDBF9C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Renato Lopes";
 				TargetAttributes = {
@@ -779,6 +872,12 @@
 					};
 					FD61BB012518410E002376D9 = {
 						CreatedOnToolsVersion = 11.3;
+					};
+					FDA80A5025240C99008C690D = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					FDA80A5825240C99008C690D = {
+						CreatedOnToolsVersion = 12.0;
 					};
 					FDDC8C2D250B14180023B465 = {
 						CreatedOnToolsVersion = 11.3;
@@ -825,6 +924,8 @@
 				FD61BAE325183BA5002376D9 /* UseCasesIntegrationTests */,
 				FD61BAF92518410E002376D9 /* Presentation */,
 				FD61BB012518410E002376D9 /* PresentationTests */,
+				FDA80A5025240C99008C690D /* UI */,
+				FDA80A5825240C99008C690D /* UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -845,6 +946,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FD61BB002518410E002376D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA80A4F25240C99008C690D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA80A5725240C99008C690D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -922,6 +1037,21 @@
 				FD3213242522BAC500EE0B9E /* EmailValidatorSpy.swift in Sources */,
 				FDA80A3F252409D4008C690D /* TestFactories.swift in Sources */,
 				FD61BB082518410E002376D9 /* SignUpPresentationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA80A4D25240C99008C690D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA80A5525240C99008C690D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA80A5F25240C99008C690D /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,6 +1138,11 @@
 			isa = PBXTargetDependency;
 			target = FD61BAF92518410E002376D9 /* Presentation */;
 			targetProxy = FD61BB042518410E002376D9 /* PBXContainerItemProxy */;
+		};
+		FDA80A5C25240C99008C690D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDA80A5025240C99008C690D /* UI */;
+			targetProxy = FDA80A5B25240C99008C690D /* PBXContainerItemProxy */;
 		};
 		FDDC8C39250B14180023B465 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1157,6 +1292,102 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDA80A6325240C99008C690D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8NKL6XVR88;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.UI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FDA80A6425240C99008C690D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8NKL6XVR88;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.UI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FDA80A6625240C99008C690D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8NKL6XVR88;
+				INFOPLIST_FILE = UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FDA80A6725240C99008C690D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8NKL6XVR88;
+				INFOPLIST_FILE = UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1548,6 +1779,24 @@
 			buildConfigurations = (
 				FD61BB0F2518410F002376D9 /* Debug */,
 				FD61BB102518410F002376D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDA80A6225240C99008C690D /* Build configuration list for PBXNativeTarget "UI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDA80A6325240C99008C690D /* Debug */,
+				FDA80A6425240C99008C690D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDA80A6525240C99008C690D /* Build configuration list for PBXNativeTarget "UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDA80A6625240C99008C690D /* Debug */,
+				FDA80A6725240C99008C690D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
