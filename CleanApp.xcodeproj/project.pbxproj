@@ -34,6 +34,7 @@
 		FDA80ABD252413CC008C690D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80ABC252413CC008C690D /* SignUpViewController.swift */; };
 		FDA80AC72524155D008C690D /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA80AC62524155D008C690D /* SignUp.storyboard */; };
 		FDA80ADE252429E4008C690D /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80ADD252429E4008C690D /* TestExtensions.swift */; };
+		FDA80B0125243354008C690D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80B0025243354008C690D /* UIViewController+Extension.swift */; };
 		FDBD6632251827CE008AE445 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */; };
 		FDBD663625182955008AE445 /* URLProtocolStup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD663525182955008AE445 /* URLProtocolStup.swift */; };
 		FDDC8C22250B11630023B465 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C21250B11630023B465 /* TestFactories.swift */; };
@@ -196,6 +197,7 @@
 		FDA80ABC252413CC008C690D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FDA80AC62524155D008C690D /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		FDA80ADD252429E4008C690D /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		FDA80B0025243354008C690D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		FDBD663525182955008AE445 /* URLProtocolStup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStup.swift; sourceTree = "<group>"; };
 		FDDC8C21250B11630023B465 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 		FDA80A5225240C99008C690D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FDA80AFF25243346008C690D /* Helpers */,
 				FDA80ADA2524299B008C690D /* Scenes */,
 				FDA80A5425240C99008C690D /* Info.plist */,
 			);
@@ -494,6 +497,14 @@
 			isa = PBXGroup;
 			children = (
 				FDA80ADD252429E4008C690D /* TestExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FDA80AFF25243346008C690D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FDA80B0025243354008C690D /* UIViewController+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1103,6 +1114,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA80B0125243354008C690D /* UIViewController+Extension.swift in Sources */,
 				FDA80ABD252413CC008C690D /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

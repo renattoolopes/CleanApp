@@ -52,6 +52,7 @@ final class SignUpViewController: UIViewController {
         super.viewDidLoad()
         configureActions()
         style()
+        closeKeyboardWhenTouchedInView()
     }
     
     // MARK: - Private Methods
