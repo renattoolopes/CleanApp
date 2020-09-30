@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Presentation
 import UIKit
 
 final class SignUpViewController: UIViewController {
@@ -16,5 +17,15 @@ final class SignUpViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+}
+// MARK: - LoadingView Extension
+extension SignUpViewController: LoadingView {
+    public func display(viewModel: LoadingViewModel) {
+        if viewModel.isLoading {
+            loadingIndicator?.startAnimating()
+        } else {
+            loadingIndicator?.stopAnimating()
+        }
     }
 }
