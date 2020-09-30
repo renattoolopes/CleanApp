@@ -99,6 +99,13 @@
 			remoteGlobalIDString = FD9F022725254E110048D3A4;
 			remoteInfo = Validation;
 		};
+		FD9F026725254EA70048D3A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD61BAF92518410E002376D9;
+			remoteInfo = Presentation;
+		};
 		FDA80A5B25240C99008C690D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDE632C82505E88E00EDBF9C /* Project object */;
@@ -858,6 +865,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD9F026825254EA70048D3A4 /* PBXTargetDependency */,
 			);
 			name = Validation;
 			productName = Validation;
@@ -1346,6 +1354,11 @@
 			target = FD9F022725254E110048D3A4 /* Validation */;
 			targetProxy = FD9F023225254E120048D3A4 /* PBXContainerItemProxy */;
 		};
+		FD9F026825254EA70048D3A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD61BAF92518410E002376D9 /* Presentation */;
+			targetProxy = FD9F026725254EA70048D3A4 /* PBXContainerItemProxy */;
+		};
 		FDA80A5C25240C99008C690D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDA80A5025240C99008C690D /* UI */;
@@ -1638,7 +1651,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1668,7 +1681,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1691,7 +1704,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1714,7 +1727,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.renatolopes.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
