@@ -31,6 +31,8 @@
 		FDA80A3F252409D4008C690D /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A3E252409D4008C690D /* TestFactories.swift */; };
 		FDA80A5A25240C99008C690D /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA80A5125240C99008C690D /* UI.framework */; };
 		FDA80A5F25240C99008C690D /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A5E25240C99008C690D /* SignUpViewControllerTests.swift */; };
+		FDA80ABD252413CC008C690D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80ABC252413CC008C690D /* SignUpViewController.swift */; };
+		FDA80AC72524155D008C690D /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA80AC62524155D008C690D /* SignUp.storyboard */; };
 		FDBD6632251827CE008AE445 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */; };
 		FDBD663625182955008AE445 /* URLProtocolStup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD663525182955008AE445 /* URLProtocolStup.swift */; };
 		FDDC8C22250B11630023B465 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C21250B11630023B465 /* TestFactories.swift */; };
@@ -190,6 +192,8 @@
 		FDA80A5925240C99008C690D /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA80A5E25240C99008C690D /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
 		FDA80A6025240C99008C690D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDA80ABC252413CC008C690D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FDA80AC62524155D008C690D /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		FDBD663525182955008AE445 /* URLProtocolStup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStup.swift; sourceTree = "<group>"; };
 		FDDC8C21250B11630023B465 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
@@ -436,6 +440,8 @@
 			isa = PBXGroup;
 			children = (
 				FDA80A5425240C99008C690D /* Info.plist */,
+				FDA80ABC252413CC008C690D /* SignUpViewController.swift */,
+				FDA80AC62524155D008C690D /* SignUp.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -883,6 +889,7 @@
 					};
 					FDA80A5025240C99008C690D = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 					};
 					FDA80A5825240C99008C690D = {
 						CreatedOnToolsVersion = 12.0;
@@ -964,6 +971,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA80AC72524155D008C690D /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1052,6 +1060,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA80ABD252413CC008C690D /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1317,6 +1326,7 @@
 		FDA80A6325240C99008C690D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1338,6 +1348,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1345,6 +1356,7 @@
 		FDA80A6425240C99008C690D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1373,6 +1385,7 @@
 		FDA80A6625240C99008C690D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1395,6 +1408,7 @@
 		FDA80A6725240C99008C690D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
