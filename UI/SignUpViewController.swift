@@ -19,6 +19,7 @@ final class SignUpViewController: UIViewController {
         super.viewDidLoad()
     }
 }
+
 // MARK: - LoadingView Extension
 extension SignUpViewController: LoadingView {
     public func display(viewModel: LoadingViewModel) {
