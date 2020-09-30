@@ -10,13 +10,46 @@ import Foundation
 import Presentation
 import UIKit
 
+
+protocol SignUpEventsProtocol {
+    var signUp: ((SignUpViewModel) -> Void)? { get set }
+}
+
 final class SignUpViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordConfirmationTextField: UITextField!
+
+    // MARK: - Reactive Actions
+    var signUp: ((SignUpViewModel) -> Void)?
+    
+    // MARK: - Private Properties
+    private lazy var signUpViewModel: SignUpViewModel = {
+        let name: String? = nameTextField?.text
+        let email: String? = emailTextField?.text
+        let password: String? = passwordTextField?.text
+        let passwordConfirmation: String? = passwordConfirmationTextField?.text
+        return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
+    }()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
+    }
+    
+    // MARK: - Private Methods
+    private func configure() {
+        saveButton.addTarget(self, action: #selector(saveButtonTap), for: .touchUpInside)
+    }
+    
+    @objc
+    private func saveButtonTap() {
+        signUp?(signUpViewModel)
     }
 }
 

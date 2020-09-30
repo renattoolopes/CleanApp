@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Domain
 
-public struct SignUpViewModel {
+public struct SignUpViewModel: Model {
     // MARK: Public Properties
     public var name: String?
     public var email: String?
