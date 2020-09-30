@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Presentation
 
 class LoadingViewSpy: LoadingView {
     var viewModel: LoadingViewModel?

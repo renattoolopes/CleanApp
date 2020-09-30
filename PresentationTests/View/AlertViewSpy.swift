@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Presentation
 
 class AlertViewSpy: AlertView {
     // MARK: - Public Properties

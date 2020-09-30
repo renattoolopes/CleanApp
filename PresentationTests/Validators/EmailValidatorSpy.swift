@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Presentation
 
 class EmailValidatorSpy: EmailValidator {
     var email: String?
