@@ -16,7 +16,7 @@ protocol SignUpEventsProtocol {
     var loading: () -> Void { get }
 }
 
-final class SignUpViewController: UIViewController, Storyborded {
+public final class SignUpViewController: UIViewController, Storyborded {
     // MARK: - Outlets
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
@@ -26,7 +26,7 @@ final class SignUpViewController: UIViewController, Storyborded {
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
 
     // MARK: - Reactive Actions
-    var signUp: ((SignUpViewModel) -> Void)?
+    public var signUp: ((SignUpViewModel) -> Void)?
     lazy var loading: (_ isLoading: Bool ) -> Void = { [weak self] isLoading in
         
         guard let self: SignUpViewController = self else { return }
@@ -48,7 +48,7 @@ final class SignUpViewController: UIViewController, Storyborded {
     }()
     
     // MARK: - Lifecycle
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         configureActions()
         style()
@@ -78,7 +78,7 @@ extension SignUpViewController: LoadingView {
 }
 
 extension SignUpViewController: AlertView {
-    func showMessage(viewModel: AlertViewModel) {
+    public func showMessage(viewModel: AlertViewModel) {
         let alert: UIAlertController = UIAlertController(title: viewModel.title, message: viewModel.message , preferredStyle: .alert)
         let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(okAction)
