@@ -36,6 +36,7 @@
                             </activityIndicatorView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zyg-WF-U58" userLabel="nameTextField">
                                 <rect key="frame" x="16" y="240" width="382" height="52"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="2Oi-ya-gH5"/>
                                 </constraints>
@@ -44,6 +45,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNb-cE-Ke4" userLabel="emailTextField">
                                 <rect key="frame" x="16" y="308" width="382" height="52"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Zte-LL-Aiv"/>
                                 </constraints>
@@ -52,6 +54,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HMH-uc-rpO" userLabel="passwordTextField">
                                 <rect key="frame" x="16" y="376" width="382" height="52"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="9bw-0L-Ka7"/>
                                 </constraints>
@@ -66,6 +69,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmação da senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVf-Co-XjR" userLabel="passwordConfirmationTextField">
                                 <rect key="frame" x="16" y="444" width="382" height="52"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="hHv-Cv-KYQ"/>
                                 </constraints>
@@ -80,7 +84,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yJT-qv-TjW"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.2374719381" green="0.41792738439999999" blue="0.68630319829999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="HMH-uc-rpO" firstAttribute="leading" secondItem="yJT-qv-TjW" secondAttribute="leading" constant="16" id="9jK-wa-36D"/>
                             <constraint firstItem="yJT-qv-TjW" firstAttribute="trailing" secondItem="Zyg-WF-U58" secondAttribute="trailing" constant="16" id="ANf-O0-oYL"/>

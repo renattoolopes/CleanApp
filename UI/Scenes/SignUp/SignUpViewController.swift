@@ -39,13 +39,13 @@ public final class SignUpViewController: UIViewController, Storyborded {
     }
     
     // MARK: - Private Properties
-    private lazy var signUpViewModel: SignUpViewModel = {
+    private var signUpViewModel: SignUpViewModel {
         let name: String? = nameTextField?.text
         let email: String? = emailTextField?.text
         let password: String? = passwordTextField?.text
         let passwordConfirmation: String? = passwordConfirmationTextField?.text
         return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
-    }()
+    }
     
     // MARK: - Lifecycle
     public override func viewDidLoad() {
@@ -61,7 +61,7 @@ public final class SignUpViewController: UIViewController, Storyborded {
     }
     
     private func style() {
-        saveButton.layer.cornerRadius = 0.8
+        saveButton.layer.cornerRadius = 8
     }
     
     @objc
