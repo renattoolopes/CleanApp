@@ -68,6 +68,7 @@
 		FDD2790F252D594200CB1AAE /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD2790E252D594200CB1AAE /* Environment.swift */; };
 		FDD2791E252D5EC100CB1AAE /* SignUpComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD2791D252D5EC100CB1AAE /* SignUpComposerTests.swift */; };
 		FDD27998252D64B100CB1AAE /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A3E252409D4008C690D /* TestFactories.swift */; };
+		FDD279A7252D712600CB1AAE /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD279A6252D712600CB1AAE /* MainQueueDispatchDecorator.swift */; };
 		FDDC8C22250B11630023B465 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C21250B11630023B465 /* TestFactories.swift */; };
 		FDDC8C25250B12080023B465 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C24250B12080023B465 /* HttpClientSpy.swift */; };
 		FDDC8C28250B12CE0023B465 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C27250B12CE0023B465 /* AccountModelFactory.swift */; };
@@ -342,6 +343,7 @@
 		FDD278F5252D58B800CB1AAE /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		FDD2790E252D594200CB1AAE /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		FDD2791D252D5EC100CB1AAE /* SignUpComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposerTests.swift; sourceTree = "<group>"; };
+		FDD279A6252D712600CB1AAE /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		FDDC8C21250B11630023B465 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		FDDC8C24250B12080023B465 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
 		FDDC8C27250B12CE0023B465 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
@@ -637,6 +639,7 @@
 		FD9F0299252553730048D3A4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FDD279A5252D712000CB1AAE /* Decorators */,
 				FDD278F3252D585400CB1AAE /* Env */,
 				FDD278D8252D494800CB1AAE /* Proxies */,
 				FDD2783E252D435700CB1AAE /* Composers */,
@@ -810,6 +813,14 @@
 				FDD2791D252D5EC100CB1AAE /* SignUpComposerTests.swift */,
 			);
 			path = Composers;
+			sourceTree = "<group>";
+		};
+		FDD279A5252D712000CB1AAE /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				FDD279A6252D712600CB1AAE /* MainQueueDispatchDecorator.swift */,
+			);
+			path = Decorators;
 			sourceTree = "<group>";
 		};
 		FDDC8C20250B114D0023B465 /* Helper */ = {
@@ -1594,6 +1605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDD27825252D42AC00CB1AAE /* UseCaseFactory.swift in Sources */,
+				FDD279A7252D712600CB1AAE /* MainQueueDispatchDecorator.swift in Sources */,
 				FDD2790F252D594200CB1AAE /* Environment.swift in Sources */,
 				FD9F029B252553730048D3A4 /* AppDelegate.swift in Sources */,
 				FD9F029D252553730048D3A4 /* SceneDelegate.swift in Sources */,
