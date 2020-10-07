@@ -14,7 +14,7 @@ import Infra
 
 final class UseCaseFactory {
     private static let httpClient: AlamofireAdapter = AlamofireAdapter()
-    private static let apiBaseURL: String = "https://clean-node-api.herokuapp.com/api"
+    private static let apiBaseURL: String = Environment.variable(.apiBaseUrl)
     
     private static func makeURL(path: String) -> URL {
         return URL(string: "\(apiBaseURL)/\(path)")!
