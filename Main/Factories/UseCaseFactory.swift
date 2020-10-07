@@ -21,23 +21,30 @@ final class UseCaseFactory {
     }
     
     static func makeRemoteAddAccount() -> AddAccount {
-        return RemoteAddAccount(url: makeURL(path: "signup"), httpPostClient: UseCaseFactory.httpClient)
+        let addAccount: RemoteAddAccount = RemoteAddAccount(url: makeURL(path: "signup"), httpPostClient: UseCaseFactory.httpClient)
+        return MainQueueDispatchDecorator(addAccount)
     }
 }
 
 
-public final class AddAccountDecorator: AddAccount {
-    private let instance: AddAccount
+public final class MainQueueDispatchDecorator<T> {
+    private let instance: T
     
-    init(_ instance: AddAccount) {
+    public init(_ instance: T) {
         self.instance = instance
     }
     
+    func dispatch(completion: @escaping () -> Void) {
+        guard Thread.isMainThread else { return DispatchQueue.main.async(execute: completion) }
+        completion()
+    }
+}
+
+
+extension MainQueueDispatchDecorator: AddAccount where T: AddAccount {
     public func add(account: AddAccountModel, compleiton: @escaping AddAccountResult) {
-        
-        instance.add(account: account) { (result) in
-            // Update UI in completion with safe thread 
-            DispatchQueue.main.async {
+        instance.add(account: account) { [weak self] (result) in
+            self?.dispatch {
                 compleiton(result)
             }
         }
