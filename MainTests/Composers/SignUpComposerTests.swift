@@ -12,8 +12,15 @@ import UI
 
 class SignUpComposerTests: XCTestCase {
     func test_background_request_should_complete_on_main_thread() {
-        let (sut, _) = makeSut()
+        let (sut, spy) = makeSut()
         sut.loadViewIfNeeded()
+        let promise: XCTestExpectation = expectation(description: "Waiting")
+        sut.signUp?(makeSignUpViewModel())
+        DispatchQueue.global().async {
+            spy.completionWithError(.unexpected)
+            promise.fulfill()
+        }
+        wait(for: [promise], timeout: 1.0)
     }
 }
 

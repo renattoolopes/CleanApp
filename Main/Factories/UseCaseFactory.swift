@@ -24,3 +24,22 @@ final class UseCaseFactory {
         return RemoteAddAccount(url: makeURL(path: "signup"), httpPostClient: UseCaseFactory.httpClient)
     }
 }
+
+
+public final class AddAccountDecorator: AddAccount {
+    private let instance: AddAccount
+    
+    init(_ instance: AddAccount) {
+        self.instance = instance
+    }
+    
+    public func add(account: AddAccountModel, compleiton: @escaping AddAccountResult) {
+        
+        instance.add(account: account) { (result) in
+            // Update UI in completion with safe thread 
+            DispatchQueue.main.async {
+                compleiton(result)
+            }
+        }
+    }
+}

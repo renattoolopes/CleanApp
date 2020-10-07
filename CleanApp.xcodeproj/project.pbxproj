@@ -67,6 +67,7 @@
 		FDD278DA252D495B00CB1AAE /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD278D9252D495B00CB1AAE /* WeakVarProxy.swift */; };
 		FDD2790F252D594200CB1AAE /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD2790E252D594200CB1AAE /* Environment.swift */; };
 		FDD2791E252D5EC100CB1AAE /* SignUpComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD2791D252D5EC100CB1AAE /* SignUpComposerTests.swift */; };
+		FDD27998252D64B100CB1AAE /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A3E252409D4008C690D /* TestFactories.swift */; };
 		FDDC8C22250B11630023B465 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C21250B11630023B465 /* TestFactories.swift */; };
 		FDDC8C25250B12080023B465 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C24250B12080023B465 /* HttpClientSpy.swift */; };
 		FDDC8C28250B12CE0023B465 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C27250B12CE0023B465 /* AccountModelFactory.swift */; };
@@ -1607,6 +1608,7 @@
 			files = (
 				FDD27899252D45AA00CB1AAE /* Extension+XCTestCase.swift in Sources */,
 				FDD2791E252D5EC100CB1AAE /* SignUpComposerTests.swift in Sources */,
+				FDD27998252D64B100CB1AAE /* TestFactories.swift in Sources */,
 				FDD2787F252D456F00CB1AAE /* AddAccountSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
