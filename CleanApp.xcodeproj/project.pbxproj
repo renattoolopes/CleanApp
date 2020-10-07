@@ -48,7 +48,7 @@
 		FD9F0300252556180048D3A4 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDA80A5125240C99008C690D /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD9F0303252556180048D3A4 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9F022825254E110048D3A4 /* Validation.framework */; };
 		FD9F0304252556180048D3A4 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD9F022825254E110048D3A4 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD9F0316252556780048D3A4 /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9F0315252556780048D3A4 /* SignUpFactory.swift */; };
+		FD9F0316252556780048D3A4 /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9F0315252556780048D3A4 /* ControllerFactory.swift */; };
 		FDA80A30252408F3008C690D /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A2F252408F3008C690D /* AddAccountSpy.swift */; };
 		FDA80A3F252409D4008C690D /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A3E252409D4008C690D /* TestFactories.swift */; };
 		FDA80A5A25240C99008C690D /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA80A5125240C99008C690D /* UI.framework */; };
@@ -59,6 +59,8 @@
 		FDA80B0125243354008C690D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80B0025243354008C690D /* UIViewController+Extension.swift */; };
 		FDBD6632251827CE008AE445 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */; };
 		FDBD663625182955008AE445 /* URLProtocolStup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD663525182955008AE445 /* URLProtocolStup.swift */; };
+		FDD27825252D42AC00CB1AAE /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD27824252D42AC00CB1AAE /* UseCaseFactory.swift */; };
+		FDD27840252D436900CB1AAE /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD2783F252D436800CB1AAE /* SignUpComposer.swift */; };
 		FDDC8C22250B11630023B465 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C21250B11630023B465 /* TestFactories.swift */; };
 		FDDC8C25250B12080023B465 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C24250B12080023B465 /* HttpClientSpy.swift */; };
 		FDDC8C28250B12CE0023B465 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC8C27250B12CE0023B465 /* AccountModelFactory.swift */; };
@@ -313,7 +315,7 @@
 		FD9F02B8252553760048D3A4 /* MainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD9F02BC252553760048D3A4 /* MainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUITests.swift; sourceTree = "<group>"; };
 		FD9F02BE252553760048D3A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD9F0315252556780048D3A4 /* SignUpFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
+		FD9F0315252556780048D3A4 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		FDA80A2F252408F3008C690D /* AddAccountSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
 		FDA80A3E252409D4008C690D /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		FDA80A5125240C99008C690D /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,6 +329,8 @@
 		FDA80B0025243354008C690D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		FDBD663525182955008AE445 /* URLProtocolStup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStup.swift; sourceTree = "<group>"; };
+		FDD27824252D42AC00CB1AAE /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
+		FDD2783F252D436800CB1AAE /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		FDDC8C21250B11630023B465 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		FDDC8C24250B12080023B465 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
 		FDDC8C27250B12CE0023B465 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
@@ -622,6 +626,7 @@
 		FD9F0299252553730048D3A4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FDD2783E252D435700CB1AAE /* Composers */,
 				FD9F03142525566D0048D3A4 /* Factories */,
 				FD9F029A252553730048D3A4 /* AppDelegate.swift */,
 				FD9F029C252553730048D3A4 /* SceneDelegate.swift */,
@@ -652,7 +657,8 @@
 		FD9F03142525566D0048D3A4 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				FD9F0315252556780048D3A4 /* SignUpFactory.swift */,
+				FD9F0315252556780048D3A4 /* ControllerFactory.swift */,
+				FDD27824252D42AC00CB1AAE /* UseCaseFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -757,6 +763,14 @@
 				FDBD663525182955008AE445 /* URLProtocolStup.swift */,
 			);
 			path = Http;
+			sourceTree = "<group>";
+		};
+		FDD2783E252D435700CB1AAE /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				FDD2783F252D436800CB1AAE /* SignUpComposer.swift */,
+			);
+			path = Composers;
 			sourceTree = "<group>";
 		};
 		FDDC8C20250B114D0023B465 /* Helper */ = {
@@ -1538,9 +1552,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDD27825252D42AC00CB1AAE /* UseCaseFactory.swift in Sources */,
 				FD9F029B252553730048D3A4 /* AppDelegate.swift in Sources */,
-				FD9F0316252556780048D3A4 /* SignUpFactory.swift in Sources */,
+				FD9F0316252556780048D3A4 /* ControllerFactory.swift in Sources */,
 				FD9F029D252553730048D3A4 /* SceneDelegate.swift in Sources */,
+				FDD27840252D436900CB1AAE /* SignUpComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
