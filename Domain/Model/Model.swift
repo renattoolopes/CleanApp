@@ -14,4 +14,9 @@ public extension Model {
     func convertToData() -> Data? {
         return try? JSONEncoder().encode(self)
     }
+    
+    func convertToJson() -> [String: Any]? {
+        guard let data: Data = self.convertToData() else { return nil }
+        return try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
+    }
 }

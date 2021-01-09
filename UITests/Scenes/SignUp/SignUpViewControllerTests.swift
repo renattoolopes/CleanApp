@@ -41,7 +41,6 @@ class SignUpViewControllerTests: XCTestCase {
         let password: String? = sut.passwordTextField?.text
         let passwordConfirmation: String? = sut.passwordConfirmationTextField?.text
 
-        
         XCTAssertEqual(signUpViewModel, SignUpViewModel(name: name,
                                                         email: email,
                                                         password: password,

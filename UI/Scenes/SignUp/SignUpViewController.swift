@@ -10,7 +10,6 @@ import Foundation
 import Presentation
 import UIKit
 
-
 protocol SignUpEventsProtocol {
     var signUp: ((SignUpViewModel) -> Void)? { get set }
     var loading: () -> Void { get }

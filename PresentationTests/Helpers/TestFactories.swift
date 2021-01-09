@@ -17,21 +17,3 @@ public func makeSignUpViewModel(name: String? = "any_name",
     return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
     
 }
-
-public func makeRequiredAlertViewModel(withField: String) -> AlertViewModel {
-    return AlertViewModel(title: "Falha na validação",
-                          message: "O campo \(withField) é obrigatorio")
-}
-
-public func makeInvalidAlertViewModel(withField: String) -> AlertViewModel {
-    return AlertViewModel(title: "Falha na validação",
-                          message: "O campo \(withField) é inválido")
-}
-
-public func makeAlertViewModel(withError: Bool = false, withMessage message: String) -> AlertViewModel {
-    if withError {
-        return AlertViewModel(title: "Erro", message: message)
-    } else {
-        return AlertViewModel(title: "Sucesso", message: message)
-    }
-}

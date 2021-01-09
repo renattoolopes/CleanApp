@@ -12,42 +12,24 @@ import Domain
 public final class SignUpPresenter {
     // MARK: - Private Properties
     private var alertView: AlertView
-    private var emailValidator: EmailValidator
     private var addAccount: AddAccount
     private var loadingView: LoadingView
+    private var validation: Validation
     
     // MARK: - Initializers
     public init(alertView: AlertView,
-                emailValidator: EmailValidator,
                 addAccount: AddAccount,
-                loadingView: LoadingView) {
+                loadingView: LoadingView,
+                validation: Validation) {
         self.alertView = alertView
-        self.emailValidator = emailValidator
         self.addAccount = addAccount
         self.loadingView = loadingView
-    }
-    
-    // MARK: - Private Methods
-    private func validate(_ viewModel: SignUpViewModel) -> String? {
-        if viewModel.name == nil || viewModel.name?.isEmpty ?? false  {
-            return "O campo Nome é obrigatorio"
-        } else if viewModel.email == nil || viewModel.email?.isEmpty ?? false {
-            return "O campo Email é obrigatorio"
-        } else if viewModel.password == nil || viewModel.password?.isEmpty ?? false {
-            return "O campo Senha é obrigatorio"
-        } else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation?.isEmpty ?? false  {
-            return "O campo Confirmar senha é obrigatorio"
-        } else if viewModel.password != viewModel.passwordConfirmation {
-            return "O campo Confirmar senha é inválido"
-        } else if let email: String = viewModel.email, !emailValidator.isValid(email: email) {
-            return "O campo Email é inválido"
-        }
-        return nil
+        self.validation = validation
     }
     
     // MARK: - Public Methods
     public func signUp(viewModel: SignUpViewModel) {
-        if let message: String = validate(viewModel) {
+        if let message: String = validation.validate(data: viewModel.convertToJson()) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação",
                                                             message: message))
             

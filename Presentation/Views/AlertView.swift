@@ -2,8 +2,7 @@
 //  AlertView.swift
 //  Presentation
 //
-//  Created by Renato Lopes on 21/09/20.
-//  Copyright © 2020 Renato Lopes. All rights reserved.
+//  Created by Renato Lopes on 30/11/20.
 //
 
 import Foundation
