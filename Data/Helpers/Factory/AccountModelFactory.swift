@@ -10,9 +10,6 @@ import Foundation
 import Domain
 
 public func makeAccountModel() -> AccountModel {
-    return AccountModel(id: "100",
-                        name: "Renato Lopes",
-                        email: "renattoolopes@gmail.com",
-                        password: "123123")
+    return AccountModel(accessToken: "any_token")
 }
  
