@@ -22,8 +22,8 @@ public class HttpClientSpy: HttpPostClient {
         self.completion = completion
     }
     
-    public func forceFailureWithError() {
-        completion?(.failure(.noConnectivity))
+    public func forceFailureWithError(error: HttpClientError = .noConnectivity) {
+        completion?(.failure(error))
     }
     
     public func forceCompletWithData(_ data: Data) {
