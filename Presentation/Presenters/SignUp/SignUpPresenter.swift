@@ -41,13 +41,17 @@ public final class SignUpPresenter {
                 guard let self = self else { return }
                 self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
                 switch result {
-                case .failure:
-                    let alertViewModel: AlertViewModel = AlertViewModel(title: "Erro", message: "Algo inesperado aconteceu, tente novamente em alguns instantes")
-                    self.alertView.showMessage(viewModel: alertViewModel)
+                
                 case .success:
                     let alertViewModel: AlertViewModel = AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso!")
                     self.alertView.showMessage(viewModel: alertViewModel)
+                    
+                case .failure(let error):
+                    let errorMessage: String = self.makeMessageDomainError(error)
+                    let alertViewModel: AlertViewModel = AlertViewModel(title: "Erro", message: errorMessage)
+                    self.alertView.showMessage(viewModel: alertViewModel)
                 }
+                
             }
 
             } catch {
@@ -55,6 +59,17 @@ public final class SignUpPresenter {
                 let alertModel: AlertViewModel = AlertViewModel(title: "Falha ao adicionar", message: "Não foi possível obter as inforções da conta. Entre em contato com um administrador.")
                 alertView.showMessage(viewModel: alertModel)
             }
+        }
+    }
+    
+    private func makeMessageDomainError(_ error: DomainError) -> String {
+        switch error {
+        case .unexpected:
+            return "Algo inesperado aconteceu, tente novamente em alguns instantes"
+        case .emailInUse:
+            return "Esse e-mail já está em uso."
+        default:
+            return "Algo inesperado aconteceu, tente novamente em alguns instantes"
         }
     }
 }
