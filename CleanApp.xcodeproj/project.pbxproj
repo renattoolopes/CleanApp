@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FD3212E82522B51900EE0B9E /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3212E72522B51900EE0B9E /* SignUpViewModel.swift */; };
-		FD3212F62522B94A00EE0B9E /* SignUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3212F52522B94A00EE0B9E /* SignUpMapper.swift */; };
 		FD3213062522BA8900EE0B9E /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3213052522BA8900EE0B9E /* AlertViewSpy.swift */; };
 		FD3213152522BA9C00EE0B9E /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3213142522BA9C00EE0B9E /* LoadingViewSpy.swift */; };
 		FD441C74254261F600F84807 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD441C73254261F600F84807 /* Validation.swift */; };
@@ -305,7 +304,6 @@
 
 /* Begin PBXFileReference section */
 		FD3212E72522B51900EE0B9E /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		FD3212F52522B94A00EE0B9E /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
 		FD3213052522BA8900EE0B9E /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
 		FD3213142522BA9C00EE0B9E /* LoadingViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
 		FD3213232522BAC500EE0B9E /* EmailValidatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpy.swift; sourceTree = "<group>"; };
@@ -529,7 +527,6 @@
 			children = (
 				FD61BB11251855AC002376D9 /* SignUpPresenter.swift */,
 				FD3212E72522B51900EE0B9E /* SignUpViewModel.swift */,
-				FD3212F52522B94A00EE0B9E /* SignUpMapper.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -1652,7 +1649,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD61BB12251855AC002376D9 /* SignUpPresenter.swift in Sources */,
-				FD3212F62522B94A00EE0B9E /* SignUpMapper.swift in Sources */,
 				FD7E3EDA25199F8D00E7325C /* LoadingView.swift in Sources */,
 				FD3212E82522B51900EE0B9E /* SignUpViewModel.swift in Sources */,
 				FD61BB172518566C002376D9 /* AlertView.swift in Sources */,
