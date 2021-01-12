@@ -19,10 +19,10 @@ public final class SignUpViewController: UIViewController, Storyborded {
     // MARK: - Outlets
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var passwordConfirmationTextField: UITextField!
+    @IBOutlet weak var nameTextField: RoundedTextField!
+    @IBOutlet weak var emailTextField: RoundedTextField!
+    @IBOutlet weak var passwordTextField: RoundedTextField!
+    @IBOutlet weak var passwordConfirmationTextField: RoundedTextField!
 
     // MARK: - Reactive Actions
     public var signUp: ((SignUpViewModel) -> Void)?
@@ -60,7 +60,8 @@ public final class SignUpViewController: UIViewController, Storyborded {
     }
     
     private func style() {
-        saveButton.layer.cornerRadius = 8
+        title = "4Devs"
+        saveButton.rounded(withRadius: 8, andColor: .clear)
     }
     
     @objc
