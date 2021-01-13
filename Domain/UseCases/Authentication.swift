@@ -13,7 +13,7 @@ public protocol Authentication {
     typealias AuthenticationResult = (Result<AccountModel, DomainError>) -> Void
     
     // MARK: - Methods
-    func auth(account: AddAccountModel, compleiton: @escaping AuthenticationResult)
+    func auth(with: AddAccountModel, compleiton: @escaping AuthenticationResult)
 }
 
 public struct AuthenticationModel: Model {

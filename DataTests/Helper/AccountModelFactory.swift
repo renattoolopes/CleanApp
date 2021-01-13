@@ -15,3 +15,8 @@ public func makeAddAccountModel() -> AddAccountModel {
                             password: "any_password",
                             passwordConfirmation: "any_password")
 }
+
+public func makeAuthenticationModel() -> AuthenticationModel {
+    return  AuthenticationModel(email: "any_email",
+                                password: "any_password")
+}
