@@ -20,6 +20,10 @@
 		FD2F4E8425B4EEA700E4A64F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2F4E8325B4EEA700E4A64F /* Login.storyboard */; };
 		FD2F4E9325B4EF8300E4A64F /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F4E9225B4EF8300E4A64F /* LoginViewControllerTests.swift */; };
 		FD2F4EAD25B4F02C00E4A64F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F4EAC25B4F02C00E4A64F /* LoginViewController.swift */; };
+		FD2F4EC725B4FB2C00E4A64F /* LoginControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F4EC625B4FB2C00E4A64F /* LoginControllerFactoryTests.swift */; };
+		FD2F4ED625B4FBC300E4A64F /* ValidationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F4ED525B4FBC300E4A64F /* ValidationFactory.swift */; };
+		FD2F4F0A25B4FC4900E4A64F /* EndpointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F4F0925B4FC4900E4A64F /* EndpointFactory.swift */; };
+		FD2F4F1825B4FC9B00E4A64F /* AlamofireFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F4F1725B4FC9B00E4A64F /* AlamofireFactory.swift */; };
 		FD3212E82522B51900EE0B9E /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3212E72522B51900EE0B9E /* SignUpViewModel.swift */; };
 		FD3213062522BA8900EE0B9E /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3213052522BA8900EE0B9E /* AlertViewSpy.swift */; };
 		FD3213152522BA9C00EE0B9E /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3213142522BA9C00EE0B9E /* LoadingViewSpy.swift */; };
@@ -82,8 +86,8 @@
 		FDA80B0125243354008C690D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80B0025243354008C690D /* UIViewController+Extension.swift */; };
 		FDBD6632251827CE008AE445 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */; };
 		FDBD663625182955008AE445 /* URLProtocolStup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD663525182955008AE445 /* URLProtocolStup.swift */; };
-		FDD27825252D42AC00CB1AAE /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD27824252D42AC00CB1AAE /* UseCaseFactory.swift */; };
-		FDD27840252D436900CB1AAE /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD2783F252D436800CB1AAE /* SignUpComposer.swift */; };
+		FDD27825252D42AC00CB1AAE /* RemoteAddAcountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD27824252D42AC00CB1AAE /* RemoteAddAcountFactory.swift */; };
+		FDD27840252D436900CB1AAE /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD2783F252D436800CB1AAE /* SignUpFactory.swift */; };
 		FDD2787F252D456F00CB1AAE /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A2F252408F3008C690D /* AddAccountSpy.swift */; };
 		FDD27899252D45AA00CB1AAE /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */; };
 		FDD278B2252D45AB00CB1AAE /* Extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5459832511A5C900C06B60 /* Extension+XCTestCase.swift */; };
@@ -331,6 +335,10 @@
 		FD2F4E8325B4EEA700E4A64F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		FD2F4E9225B4EF8300E4A64F /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		FD2F4EAC25B4F02C00E4A64F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FD2F4EC625B4FB2C00E4A64F /* LoginControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerFactoryTests.swift; sourceTree = "<group>"; };
+		FD2F4ED525B4FBC300E4A64F /* ValidationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationFactory.swift; sourceTree = "<group>"; };
+		FD2F4F0925B4FC4900E4A64F /* EndpointFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointFactory.swift; sourceTree = "<group>"; };
+		FD2F4F1725B4FC9B00E4A64F /* AlamofireFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireFactory.swift; sourceTree = "<group>"; };
 		FD3212E72522B51900EE0B9E /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		FD3213052522BA8900EE0B9E /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
 		FD3213142522BA9C00EE0B9E /* LoadingViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
@@ -392,8 +400,8 @@
 		FDA80B0025243354008C690D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		FDBD663525182955008AE445 /* URLProtocolStup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStup.swift; sourceTree = "<group>"; };
-		FDD27824252D42AC00CB1AAE /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
-		FDD2783F252D436800CB1AAE /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
+		FDD27824252D42AC00CB1AAE /* RemoteAddAcountFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAcountFactory.swift; sourceTree = "<group>"; };
+		FDD2783F252D436800CB1AAE /* SignUpFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
 		FDD278D9252D495B00CB1AAE /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
 		FDD278F4252D586300CB1AAE /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		FDD278F5252D58B800CB1AAE /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -603,6 +611,23 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		FD2F4F0725B4FC1300E4A64F /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F4F0925B4FC4900E4A64F /* EndpointFactory.swift */,
+				FD2F4F1725B4FC9B00E4A64F /* AlamofireFactory.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		FD2F4F0825B4FC1800E4A64F /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				FDD27824252D42AC00CB1AAE /* RemoteAddAcountFactory.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		FD3212E62522B50700EE0B9E /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -802,8 +827,7 @@
 				FDD279A5252D712000CB1AAE /* Decorators */,
 				FDD278F3252D585400CB1AAE /* Env */,
 				FDD278D8252D494800CB1AAE /* Proxies */,
-				FDD2783E252D435700CB1AAE /* Composers */,
-				FD9F03142525566D0048D3A4 /* Factories */,
+				FDD2783E252D435700CB1AAE /* Factories */,
 				FD9F029A252553730048D3A4 /* AppDelegate.swift */,
 				FD9F029C252553730048D3A4 /* SceneDelegate.swift */,
 				FD9F02A3252553750048D3A4 /* Assets.xcassets */,
@@ -829,14 +853,6 @@
 				FD9F02BE252553760048D3A4 /* Info.plist */,
 			);
 			path = MainUITests;
-			sourceTree = "<group>";
-		};
-		FD9F03142525566D0048D3A4 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				FDD27824252D42AC00CB1AAE /* UseCaseFactory.swift */,
-			);
-			path = Factories;
 			sourceTree = "<group>";
 		};
 		FDA80A2E252408DC008C690D /* UseCases */ = {
@@ -948,12 +964,15 @@
 			path = Http;
 			sourceTree = "<group>";
 		};
-		FDD2783E252D435700CB1AAE /* Composers */ = {
+		FDD2783E252D435700CB1AAE /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				FDD2783F252D436800CB1AAE /* SignUpComposer.swift */,
+				FD2F4F0825B4FC1800E4A64F /* UseCases */,
+				FD2F4F0725B4FC1300E4A64F /* Http */,
+				FDD2783F252D436800CB1AAE /* SignUpFactory.swift */,
+				FD2F4ED525B4FBC300E4A64F /* ValidationFactory.swift */,
 			);
-			path = Composers;
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		FDD278D8252D494800CB1AAE /* Proxies */ = {
@@ -978,6 +997,7 @@
 			isa = PBXGroup;
 			children = (
 				FDD2791D252D5EC100CB1AAE /* SignUpComposerTests.swift */,
+				FD2F4EC625B4FB2C00E4A64F /* LoginControllerFactoryTests.swift */,
 			);
 			path = Composers;
 			sourceTree = "<group>";
@@ -1790,13 +1810,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD27825252D42AC00CB1AAE /* UseCaseFactory.swift in Sources */,
+				FDD27825252D42AC00CB1AAE /* RemoteAddAcountFactory.swift in Sources */,
 				FDD279A7252D712600CB1AAE /* MainQueueDispatchDecorator.swift in Sources */,
 				FDD2790F252D594200CB1AAE /* Environment.swift in Sources */,
+				FD2F4F1825B4FC9B00E4A64F /* AlamofireFactory.swift in Sources */,
 				FD9F029B252553730048D3A4 /* AppDelegate.swift in Sources */,
 				FD9F029D252553730048D3A4 /* SceneDelegate.swift in Sources */,
+				FD2F4F0A25B4FC4900E4A64F /* EndpointFactory.swift in Sources */,
+				FD2F4ED625B4FBC300E4A64F /* ValidationFactory.swift in Sources */,
 				FDD278DA252D495B00CB1AAE /* WeakVarProxy.swift in Sources */,
-				FDD27840252D436900CB1AAE /* SignUpComposer.swift in Sources */,
+				FDD27840252D436900CB1AAE /* SignUpFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1804,6 +1827,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2F4EC725B4FB2C00E4A64F /* LoginControllerFactoryTests.swift in Sources */,
 				FDD27899252D45AA00CB1AAE /* Extension+XCTestCase.swift in Sources */,
 				FDD2791E252D5EC100CB1AAE /* SignUpComposerTests.swift in Sources */,
 				FDD27998252D64B100CB1AAE /* TestFactories.swift in Sources */,
