@@ -91,38 +91,3 @@ extension RemoteAuthenticationTests {
         wait(for: [expec], timeout: 1)
     }
 }
-
-
-
-public class RemoteAuthentication: Authentication {
-    // MARK: - Public Properties
-    public var url: URL
-    public var httpClient: HttpPostClient
-    
-    // MARK: - Initializers
-    public init(url: URL, httpClient: HttpPostClient) {
-        self.url = url
-        self.httpClient = httpClient
-    }
-    
-    public func auth(with model: AuthenticationModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
-        httpClient.post(to: url, with: model.convertToData()) {[weak self] result in
-            guard self != nil else { return }
-            switch result {
-            case .success(let data):
-                if let accountModel: AccountModel = data?.convertToModel() {
-                    completion(.success(accountModel))
-                } else {
-                    completion(.failure(.unexpected))
-                }
-            case .failure(let error):
-                switch error {
-                case .unauthorized:
-                    completion(.failure(.expiredSession))
-                default:
-                    completion(.failure(.unexpected))
-                }
-            }
-        }
-    }
-}
