@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="9ig-p6-oTt">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" id="0ct-Ib-9jw" userLabel="Login" customClass="SignUpViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uj5-ny-WNV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyt-Me-zbi">
+                                <rect key="frame" x="32" y="438" width="350" height="62"/>
+                                <color key="backgroundColor" red="0.53333333329999999" green="0.054901960780000002" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="buZ-Yw-dlW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="ENTRAR">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oG7-Zh-zXg" userLabel="emailTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
+                                <rect key="frame" x="16" y="310" width="382" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sSA-6G-K1d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4UG-OU-Dvr" userLabel="passwordTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
+                                <rect key="frame" x="16" y="366" width="382" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7aA-7T-ZJu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DV-0R-rGr" userLabel="header_view">
+                                <rect key="frame" x="0.0" y="44" width="414" height="202"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Wn-0K-4UA" userLabel="logo">
+                                        <rect key="frame" x="147" y="56" width="120" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="sS2-i2-jAz"/>
+                                            <constraint firstAttribute="width" constant="120" id="w4a-lD-qbh"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.53333333329999999" green="0.054901960780000002" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2Wn-0K-4UA" firstAttribute="top" secondItem="1DV-0R-rGr" secondAttribute="top" constant="56" id="WwN-y6-XTg"/>
+                                    <constraint firstItem="2Wn-0K-4UA" firstAttribute="centerX" secondItem="1DV-0R-rGr" secondAttribute="centerX" id="acx-ib-Rad"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Wn-0K-4UA" secondAttribute="bottom" constant="56" id="tXT-p5-1zm"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiI-WC-Sqf" userLabel="create_account_title">
+                                <rect key="frame" x="181" y="270" width="52" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.0" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gtm-7j-uZc">
+                                <rect key="frame" x="188.5" y="516" width="37" height="37"/>
+                                <color key="tintColor" red="0.82442569730000004" green="0.28324592110000002" blue="0.26663517949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lMW-DV-xkE"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gtm-7j-uZc" firstAttribute="top" secondItem="gyt-Me-zbi" secondAttribute="bottom" constant="16" id="0Qe-aE-HZ7"/>
+                            <constraint firstItem="1DV-0R-rGr" firstAttribute="leading" secondItem="lMW-DV-xkE" secondAttribute="leading" id="48S-M4-N2s"/>
+                            <constraint firstItem="gyt-Me-zbi" firstAttribute="leading" secondItem="lMW-DV-xkE" secondAttribute="leading" constant="32" id="7hq-ih-c5a"/>
+                            <constraint firstItem="gtm-7j-uZc" firstAttribute="centerX" secondItem="gyt-Me-zbi" secondAttribute="centerX" id="9Pl-iB-Fu6"/>
+                            <constraint firstItem="uiI-WC-Sqf" firstAttribute="top" secondItem="1DV-0R-rGr" secondAttribute="bottom" constant="24" id="Cwz-j3-xGc"/>
+                            <constraint firstItem="4UG-OU-Dvr" firstAttribute="top" secondItem="oG7-Zh-zXg" secondAttribute="bottom" constant="16" id="K0y-Ez-qAz"/>
+                            <constraint firstItem="gyt-Me-zbi" firstAttribute="top" secondItem="4UG-OU-Dvr" secondAttribute="bottom" constant="32" id="OZi-nL-Il8"/>
+                            <constraint firstItem="lMW-DV-xkE" firstAttribute="trailing" secondItem="oG7-Zh-zXg" secondAttribute="trailing" constant="16" id="R3f-Xh-aby"/>
+                            <constraint firstItem="uiI-WC-Sqf" firstAttribute="centerX" secondItem="1DV-0R-rGr" secondAttribute="centerX" id="URH-wf-h9l"/>
+                            <constraint firstItem="4UG-OU-Dvr" firstAttribute="leading" secondItem="lMW-DV-xkE" secondAttribute="leading" constant="16" id="aQA-wU-1Kz"/>
+                            <constraint firstItem="lMW-DV-xkE" firstAttribute="trailing" secondItem="1DV-0R-rGr" secondAttribute="trailing" id="c6B-e5-Xl9"/>
+                            <constraint firstItem="1DV-0R-rGr" firstAttribute="top" secondItem="lMW-DV-xkE" secondAttribute="top" id="d7F-Ct-UI6"/>
+                            <constraint firstItem="lMW-DV-xkE" firstAttribute="trailing" secondItem="gyt-Me-zbi" secondAttribute="trailing" constant="32" id="ipc-lT-Znu"/>
+                            <constraint firstItem="lMW-DV-xkE" firstAttribute="trailing" secondItem="4UG-OU-Dvr" secondAttribute="trailing" constant="16" id="kya-wE-dcu"/>
+                            <constraint firstItem="oG7-Zh-zXg" firstAttribute="leading" secondItem="lMW-DV-xkE" secondAttribute="leading" constant="16" id="ndQ-RJ-OBC"/>
+                            <constraint firstItem="oG7-Zh-zXg" firstAttribute="top" secondItem="uiI-WC-Sqf" secondAttribute="bottom" constant="16" id="t26-N6-Mwh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="oG7-Zh-zXg" id="115-93-B3A"/>
+                        <outlet property="loadingIndicator" destination="gtm-7j-uZc" id="gBR-Im-Puv"/>
+                        <outlet property="passwordTextField" destination="4UG-OU-Dvr" id="ccI-7S-Jt1"/>
+                        <outlet property="saveButton" destination="gyt-Me-zbi" id="aqb-58-CGK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YV7-bl-xOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1097.1014492753625" y="174.77678571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="120" height="87"/>
+    </resources>
+</document>
