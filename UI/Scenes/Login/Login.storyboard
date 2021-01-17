@@ -11,7 +11,7 @@
         <!--Login-->
         <scene sceneID="9ig-p6-oTt">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="0ct-Ib-9jw" userLabel="Login" customClass="SignUpViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="0ct-Ib-9jw" userLabel="Login" customClass="LoginViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uj5-ny-WNV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,15 +98,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="oG7-Zh-zXg" id="115-93-B3A"/>
-                        <outlet property="loadingIndicator" destination="gtm-7j-uZc" id="gBR-Im-Puv"/>
-                        <outlet property="passwordTextField" destination="4UG-OU-Dvr" id="ccI-7S-Jt1"/>
-                        <outlet property="saveButton" destination="gyt-Me-zbi" id="aqb-58-CGK"/>
+                        <outlet property="emailTextField" destination="oG7-Zh-zXg" id="AeG-nj-9Tz"/>
+                        <outlet property="loadingIndicator" destination="gtm-7j-uZc" id="kId-5I-11N"/>
+                        <outlet property="loginButton" destination="gyt-Me-zbi" id="SLg-a4-phf"/>
+                        <outlet property="passwordTextField" destination="4UG-OU-Dvr" id="gMJ-4U-8bI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YV7-bl-xOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1097.1014492753625" y="174.77678571428569"/>
+            <point key="canvasLocation" x="-1264" y="29"/>
         </scene>
     </scenes>
     <resources>

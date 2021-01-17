@@ -1,34 +1,25 @@
 //
-//  SignUpViewController.swift
+//  LoginViewController.swift
 //  UI
 //
-//  Created by Renato Lopes on 29/09/20.
-//  Copyright © 2020 Renato Lopes. All rights reserved.
+//  Created by Renato Lopes on 17/01/21.
+//  Copyright © 2021 Renato Lopes. All rights reserved.
 //
 
-import Foundation
-import Presentation
 import UIKit
+import Presentation
 
-protocol SignUpEventsProtocol {
-    var signUp: ((SignUpViewModel) -> Void)? { get set }
-    var loading: () -> Void { get }
-}
-
-public final class SignUpViewController: UIViewController, Storyborded {
+class LoginViewController: UIViewController, Storyborded {
     // MARK: - Outlets
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var nameTextField: RoundedTextField!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailTextField: RoundedTextField!
     @IBOutlet weak var passwordTextField: RoundedTextField!
-    @IBOutlet weak var passwordConfirmationTextField: RoundedTextField!
-
+    
     // MARK: - Reactive Actions
-    public var signUp: ((SignUpViewModel) -> Void)?
     lazy var loading: (_ isLoading: Bool ) -> Void = { [weak self] isLoading in
-        
-        guard let self: SignUpViewController = self else { return }
+
+        guard let self: LoginViewController = self else { return }
         if isLoading {
             self.loadingIndicator?.startAnimating()
         } else {
@@ -37,14 +28,7 @@ public final class SignUpViewController: UIViewController, Storyborded {
         self.view.isUserInteractionEnabled = !isLoading
     }
     
-    // MARK: - Private Properties
-    private var signUpViewModel: SignUpViewModel {
-        let name: String? = nameTextField?.text
-        let email: String? = emailTextField?.text
-        let password: String? = passwordTextField?.text
-        let passwordConfirmation: String? = passwordConfirmationTextField?.text
-        return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
-    }
+    public var loginEvent: ((LoginViewModel) -> Void)?
     
     // MARK: - Lifecycle
     public override func viewDidLoad() {
@@ -56,29 +40,30 @@ public final class SignUpViewController: UIViewController, Storyborded {
     
     // MARK: - Private Methods
     private func configureActions() {
-        saveButton.addTarget(self, action: #selector(saveButtonTap), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTap), for: .touchUpInside)
     }
     
     private func style() {
         title = "4Devs"
-        saveButton.rounded(withRadius: 8, andColor: .clear)
+        loginButton.rounded(withRadius: 8, andColor: .clear)
     }
     
     @objc
-    private func saveButtonTap() {
-        signUp?(signUpViewModel)
+    private func loginButtonTap() {
+        let viewModel: LoginViewModel = LoginViewModel(email: emailTextField.text, password: passwordTextField.text)
+        loginEvent?(viewModel)
     }
 }
 
 // MARK: - LoadingView Extension
-extension SignUpViewController: LoadingView {
+extension LoginViewController: LoadingView {
     public func display(viewModel: LoadingViewModel) {
         loading(viewModel.isLoading)
     }
 }
 
 // MARK: - AlertView Extension
-extension SignUpViewController: AlertView {
+extension LoginViewController: AlertView {
     public func showMessage(viewModel: AlertViewModel) {
         let alert: UIAlertController = UIAlertController(title: viewModel.title, message: viewModel.message , preferredStyle: .alert)
         let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)

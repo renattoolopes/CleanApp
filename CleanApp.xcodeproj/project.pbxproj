@@ -18,6 +18,8 @@
 		FD2F4E6725B4DDCA00E4A64F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F4E6625B4DDCA00E4A64F /* LoginViewModel.swift */; };
 		FD2F4E7525B4DE3A00E4A64F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F4E7425B4DE3A00E4A64F /* LoginPresenter.swift */; };
 		FD2F4E8425B4EEA700E4A64F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2F4E8325B4EEA700E4A64F /* Login.storyboard */; };
+		FD2F4E9325B4EF8300E4A64F /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F4E9225B4EF8300E4A64F /* LoginViewControllerTests.swift */; };
+		FD2F4EAD25B4F02C00E4A64F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F4EAC25B4F02C00E4A64F /* LoginViewController.swift */; };
 		FD3212E82522B51900EE0B9E /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3212E72522B51900EE0B9E /* SignUpViewModel.swift */; };
 		FD3213062522BA8900EE0B9E /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3213052522BA8900EE0B9E /* AlertViewSpy.swift */; };
 		FD3213152522BA9C00EE0B9E /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3213142522BA9C00EE0B9E /* LoadingViewSpy.swift */; };
@@ -327,6 +329,8 @@
 		FD2F4E6625B4DDCA00E4A64F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FD2F4E7425B4DE3A00E4A64F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		FD2F4E8325B4EEA700E4A64F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		FD2F4E9225B4EF8300E4A64F /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		FD2F4EAC25B4F02C00E4A64F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FD3212E72522B51900EE0B9E /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		FD3213052522BA8900EE0B9E /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
 		FD3213142522BA9C00EE0B9E /* LoadingViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
@@ -586,6 +590,15 @@
 			isa = PBXGroup;
 			children = (
 				FD2F4E8325B4EEA700E4A64F /* Login.storyboard */,
+				FD2F4EAC25B4F02C00E4A64F /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FD2F4E9125B4EF6100E4A64F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F4E9225B4EF8300E4A64F /* LoginViewControllerTests.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -893,6 +906,7 @@
 		FDA80ADB252429A6008C690D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FD2F4E9125B4EF6100E4A64F /* Login */,
 				FDA80AD925242969008C690D /* SignUp */,
 			);
 			path = Scenes;
@@ -1809,6 +1823,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2F4EAD25B4F02C00E4A64F /* LoginViewController.swift in Sources */,
 				FDA80B0125243354008C690D /* UIViewController+Extension.swift in Sources */,
 				FD111FE425AD41A20051576A /* NavigationController.swift in Sources */,
 				FD111FAD25AD3D220051576A /* UIColor+Extensions.swift in Sources */,
@@ -1824,6 +1839,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2F4E9325B4EF8300E4A64F /* LoginViewControllerTests.swift in Sources */,
 				FDD278BF252D45AE00CB1AAE /* Extension+XCTestCase.swift in Sources */,
 				FDA80A5F25240C99008C690D /* SignUpViewControllerTests.swift in Sources */,
 				FDA80ADE252429E4008C690D /* TestExtensions.swift in Sources */,
