@@ -17,3 +17,10 @@ public func makeSignUpViewModel(name: String? = "any_name",
     return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
     
 }
+
+public func makeLoginViewModel(email: String? = "any_email",
+                                password: String? = "any_password") -> LoginViewModel {
+    
+    return LoginViewModel(email: email, password: password)
+    
+}
