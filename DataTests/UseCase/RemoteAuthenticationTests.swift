@@ -38,13 +38,31 @@ class RemoteAuthenticationTests: XCTestCase {
         }
     }
     
-    func test_add_should_complete_with_account_if_client_completes_with_data() {
+    func test_auth_should_complete_with_account_if_client_completes_with_data() {
         // "sut" is used to identifier which object is been tested
         let (sut, httpClientSpy) = makeSut()
         let expectedAccount: AccountModel = makeAccountModel()
         expect(sut: sut, completeWith: .success(expectedAccount)) {
             httpClientSpy.forceCompletWithData(expectedAccount.convertToData()!)
         }
+    }
+    
+    func test_auth_should_complete_with_account_if_client_completes_with_invalid_data() {
+        // "sut" is used to identifier which object is been tested
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut: sut, completeWith: .failure(.unexpected)) {
+            httpClientSpy.forceCompletWithData(makeInvalidData())
+        }
+    }
+    
+    func test_auth_should_not_complete_when_sut_is_nil() {
+        let httpClientSpy: HttpClientSpy = HttpClientSpy()
+        var sut: RemoteAuthentication? = RemoteAuthentication(url: makeFakeURL()!, httpClient: httpClientSpy)
+        var completionNil: Result<AccountModel,DomainError>?
+        sut?.auth(with: makeAuthenticationModel(), completion: { completionNil = $0})
+        sut = nil
+        httpClientSpy.forceFailureWithError()
+        XCTAssertNil(completionNil)
     }
 }
 
