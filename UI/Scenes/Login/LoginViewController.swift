@@ -17,17 +17,6 @@ public class LoginViewController: UIViewController, Storyborded {
     @IBOutlet weak var passwordTextField: RoundedTextField!
     
     // MARK: - Reactive Actions
-    lazy var loading: (_ isLoading: Bool ) -> Void = { [weak self] isLoading in
-
-        guard let self: LoginViewController = self else { return }
-        if isLoading {
-            self.loadingIndicator?.startAnimating()
-        } else {
-            self.loadingIndicator?.stopAnimating()
-        }
-        self.view.isUserInteractionEnabled = !isLoading
-    }
-    
     public var loginEvent: ((LoginViewModel) -> Void)?
     
     // MARK: - Lifecycle
@@ -58,7 +47,12 @@ public class LoginViewController: UIViewController, Storyborded {
 // MARK: - LoadingView Extension
 extension LoginViewController: LoadingView {
     public func display(viewModel: LoadingViewModel) {
-        loading(viewModel.isLoading)
+        if viewModel.isLoading {
+            self.loadingIndicator?.startAnimating()
+        } else {
+            self.loadingIndicator?.stopAnimating()
+        }
+        self.view.isUserInteractionEnabled = !viewModel.isLoading
     }
 }
 

@@ -22,6 +22,18 @@ class LoginControllerFactoryTests: XCTestCase {
         
         XCTAssertEqual(validations[2] as! EmailValidation, EmailValidation(fieldName: "email", fieldLabel: "Email", emailValidator: EmailValidatorSpy()))
     }
+    
+    func test_background_request_should_complete_on_main_thread() {
+        let (sut, spy) = makeSut()
+        sut.loadViewIfNeeded()
+        let promise: XCTestExpectation = expectation(description: "Waiting")
+        sut.loginEvent?(makeLoginViewModel())
+        DispatchQueue.global().async {
+            spy.completionWithError(.unexpected)
+            promise.fulfill()
+        }
+        wait(for: [promise], timeout: 1.0)
+    }
 
 }
 
@@ -29,7 +41,7 @@ class LoginControllerFactoryTests: XCTestCase {
 extension LoginControllerFactoryTests {
     func makeSut() -> (sut: LoginViewController, spy: AuthenticationSpy) {
         let spy = AuthenticationSpy()
-        let sut = LoginControllerFactory.composeController(withAuth: spy)
+        let sut = LoginControllerFactory.composeController(withAuth: MainQueueDispatchDecorator(spy))
         checkMemoryLeak(for: spy)
         checkMemoryLeak(for: sut)
         return (sut, spy)

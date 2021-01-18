@@ -148,5 +148,113 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E4B9D25-6310-44F1-B755-32818C858B91"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UI/Scenes/Login/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "6E4B9D25-6310-44F1-B755-32818C858B91 - 962a18679e7f3dc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UI.LoginViewController.loginEvent.getter : Swift.Optional&lt;(Presentation.LoginViewModel) -&gt; ()&gt;"
+                  moduleName = "UI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renatolopes/Developer/Study/clean_arch_app/UI/Scenes/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "131">
+               </Location>
+               <Location
+                  uuid = "6E4B9D25-6310-44F1-B755-32818C858B91 - 70aad430a2a1f9f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UI.LoginViewController.loginEvent.setter : Swift.Optional&lt;(Presentation.LoginViewModel) -&gt; ()&gt;"
+                  moduleName = "UI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renatolopes/Developer/Study/clean_arch_app/UI/Scenes/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "166">
+               </Location>
+               <Location
+                  uuid = "6E4B9D25-6310-44F1-B755-32818C858B91 - 94ea6e1243289e6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UI.LoginViewController.loginEvent.modify : Swift.Optional&lt;(Presentation.LoginViewModel) -&gt; ()&gt;"
+                  moduleName = "UI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renatolopes/Developer/Study/clean_arch_app/UI/Scenes/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "6E4B9D25-6310-44F1-B755-32818C858B91 - ff8f27b46e048a0e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UI.LoginViewController.loginEvent.modify : Swift.Optional&lt;(Presentation.LoginViewModel) -&gt; ()&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "UI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renatolopes/Developer/Study/clean_arch_app/UI/Scenes/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "6E4B9D25-6310-44F1-B755-32818C858B91 - 2973a2dd9d75d326"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UI.LoginViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; UI.LoginViewController"
+                  moduleName = "UI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renatolopes/Developer/Study/clean_arch_app/UI/Scenes/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "738">
+               </Location>
+               <Location
+                  uuid = "6E4B9D25-6310-44F1-B755-32818C858B91 - 6de72ddb2cd3d7cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UI.LoginViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;UI.LoginViewController&gt;"
+                  moduleName = "UI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renatolopes/Developer/Study/clean_arch_app/UI/Scenes/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "679">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
