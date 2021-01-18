@@ -15,6 +15,7 @@ public final class WellcomeViewController: UIViewController, Storyborded {
 
     // MARK: - Reactive Actions
     public var loginEvent: (() -> Void)?
+    public var signUpEvent: (() -> Void)?
 
     // MARK: - Lifecycle
     public override func viewDidLoad() {
@@ -26,6 +27,8 @@ public final class WellcomeViewController: UIViewController, Storyborded {
     // MARK: - Private Methods
     private func configureActions() {
         loginButton.addTarget(self, action: #selector(loginButtonTap), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpButtonTap), for: .touchUpInside)
+
     }
     
     private func style() {
@@ -37,4 +40,10 @@ public final class WellcomeViewController: UIViewController, Storyborded {
     private func loginButtonTap() {
         loginEvent?()
     }
+    
+    @objc
+    private func signUpButtonTap() {
+        signUpEvent?()
+    }
+    
 }

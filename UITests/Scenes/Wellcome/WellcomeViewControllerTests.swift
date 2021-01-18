@@ -18,6 +18,12 @@ class WellcomeViewControllerTests: XCTestCase {
         XCTAssertEqual(1, spy.clicks)
     }
     
+    func test_signUpButton_calls_login_on_tap() {
+        let (sut, spy) = makeSut()
+        sut.signUpButton?.simulateTap()
+        XCTAssertEqual(1, spy.clicks)
+    }
+    
 }
 
 extension WellcomeViewControllerTests {
@@ -28,6 +34,7 @@ extension WellcomeViewControllerTests {
         checkMemoryLeak(for: sut)
         
         sut.loginEvent = buttonSpy.onClick
+        sut.signUpEvent = buttonSpy.onClick
         return (sut, buttonSpy)
     }
     class ButtonSpy {

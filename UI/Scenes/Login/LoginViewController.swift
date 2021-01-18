@@ -17,7 +17,7 @@ public final class LoginViewController: UIViewController, Storyborded {
     @IBOutlet weak var passwordTextField: RoundedTextField!
     
     // MARK: - Reactive Actions
-    public var loginEvent: ((LoginViewModel) -> Void)?
+    public var loginEvent: ((LoginRequest) -> Void)?
     
     // MARK: - Lifecycle
     public override func viewDidLoad() {
@@ -39,7 +39,7 @@ public final class LoginViewController: UIViewController, Storyborded {
     
     @objc
     private func loginButtonTap() {
-        let viewModel: LoginViewModel = LoginViewModel(email: emailTextField.text, password: passwordTextField.text)
+        let viewModel: LoginRequest = LoginRequest(email: emailTextField.text, password: passwordTextField.text)
         loginEvent?(viewModel)
     }
 }

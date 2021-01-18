@@ -11,7 +11,7 @@ import Presentation
 import UIKit
 
 protocol SignUpEventsProtocol {
-    var signUp: ((SignUpViewModel) -> Void)? { get set }
+    var signUp: ((SignUpRequest) -> Void)? { get set }
     var loading: () -> Void { get }
 }
 
@@ -25,7 +25,7 @@ public final class SignUpViewController: UIViewController, Storyborded {
     @IBOutlet weak var passwordConfirmationTextField: RoundedTextField!
 
     // MARK: - Reactive Actions
-    public var signUp: ((SignUpViewModel) -> Void)?
+    public var signUp: ((SignUpRequest) -> Void)?
     lazy var loading: (_ isLoading: Bool ) -> Void = { [weak self] isLoading in
         
         guard let self: SignUpViewController = self else { return }
@@ -38,12 +38,12 @@ public final class SignUpViewController: UIViewController, Storyborded {
     }
     
     // MARK: - Private Properties
-    private var signUpViewModel: SignUpViewModel {
+    private var signUpViewModel: SignUpRequest {
         let name: String? = nameTextField?.text
         let email: String? = emailTextField?.text
         let password: String? = passwordTextField?.text
         let passwordConfirmation: String? = passwordConfirmationTextField?.text
-        return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
+        return SignUpRequest(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
     }
     
     // MARK: - Lifecycle

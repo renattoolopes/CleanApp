@@ -12,15 +12,15 @@ import Presentation
 public func makeSignUpViewModel(name: String? = "any_name",
                                 email: String? = "any_email",
                                 password: String? = "any_password",
-                                passwordConfirmation: String? = "any_password") -> SignUpViewModel {
+                                passwordConfirmation: String? = "any_password") -> SignUpRequest {
     
-    return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
+    return SignUpRequest(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
     
 }
 
 public func makeLoginViewModel(email: String? = "any_email",
-                                password: String? = "any_password") -> LoginViewModel {
+                                password: String? = "any_password") -> LoginRequest {
     
-    return LoginViewModel(email: email, password: password)
+    return LoginRequest(email: email, password: password)
     
 }
