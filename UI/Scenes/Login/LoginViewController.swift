@@ -9,7 +9,7 @@
 import UIKit
 import Presentation
 
-public class LoginViewController: UIViewController, Storyborded {
+public final class LoginViewController: UIViewController, Storyborded {
     // MARK: - Outlets
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loginButton: UIButton!

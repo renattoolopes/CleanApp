@@ -48,6 +48,8 @@
 		FD61BB12251855AC002376D9 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61BB11251855AC002376D9 /* SignUpPresenter.swift */; };
 		FD61BB172518566C002376D9 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61BB162518566C002376D9 /* AlertView.swift */; };
 		FD633A4725B5E815002E4AE3 /* Wellcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD633A4625B5E815002E4AE3 /* Wellcome.storyboard */; };
+		FD633A5625B5EAE1002E4AE3 /* WellcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD633A5525B5EAE1002E4AE3 /* WellcomeViewControllerTests.swift */; };
+		FD633A7025B5EBFC002E4AE3 /* WellcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD633A6F25B5EBFC002E4AE3 /* WellcomeViewController.swift */; };
 		FD7E3ED32519842400E7325C /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ED22519842400E7325C /* AccountModelFactory.swift */; };
 		FD7E3ED42519849700E7325C /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ED22519842400E7325C /* AccountModelFactory.swift */; };
 		FD7E3ED72519880700E7325C /* ModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E3ED62519880700E7325C /* ModelError.swift */; };
@@ -366,6 +368,8 @@
 		FD61BB11251855AC002376D9 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		FD61BB162518566C002376D9 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		FD633A4625B5E815002E4AE3 /* Wellcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wellcome.storyboard; sourceTree = "<group>"; };
+		FD633A5525B5EAE1002E4AE3 /* WellcomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeViewControllerTests.swift; sourceTree = "<group>"; };
+		FD633A6F25B5EBFC002E4AE3 /* WellcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeViewController.swift; sourceTree = "<group>"; };
 		FD7E3ECF25196DB000E7325C /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		FD7E3ED22519842400E7325C /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
 		FD7E3ED62519880700E7325C /* ModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelError.swift; sourceTree = "<group>"; };
@@ -786,6 +790,15 @@
 			isa = PBXGroup;
 			children = (
 				FD633A4625B5E815002E4AE3 /* Wellcome.storyboard */,
+				FD633A6F25B5EBFC002E4AE3 /* WellcomeViewController.swift */,
+			);
+			path = Wellcome;
+			sourceTree = "<group>";
+		};
+		FD633A5425B5EACD002E4AE3 /* Wellcome */ = {
+			isa = PBXGroup;
+			children = (
+				FD633A5525B5EAE1002E4AE3 /* WellcomeViewControllerTests.swift */,
 			);
 			path = Wellcome;
 			sourceTree = "<group>";
@@ -960,6 +973,7 @@
 		FDA80ADB252429A6008C690D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FD633A5425B5EACD002E4AE3 /* Wellcome */,
 				FD2F4E9125B4EF6100E4A64F /* Login */,
 				FDA80AD925242969008C690D /* SignUp */,
 			);
@@ -1893,6 +1907,7 @@
 			files = (
 				FD2F4EAD25B4F02C00E4A64F /* LoginViewController.swift in Sources */,
 				FDA80B0125243354008C690D /* UIViewController+Extension.swift in Sources */,
+				FD633A7025B5EBFC002E4AE3 /* WellcomeViewController.swift in Sources */,
 				FD111FE425AD41A20051576A /* NavigationController.swift in Sources */,
 				FD111FAD25AD3D220051576A /* UIColor+Extensions.swift in Sources */,
 				FDA80ABD252413CC008C690D /* SignUpViewController.swift in Sources */,
@@ -1907,6 +1922,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD633A5625B5EAE1002E4AE3 /* WellcomeViewControllerTests.swift in Sources */,
 				FD2F4E9325B4EF8300E4A64F /* LoginViewControllerTests.swift in Sources */,
 				FDD278BF252D45AE00CB1AAE /* Extension+XCTestCase.swift in Sources */,
 				FDA80A5F25240C99008C690D /* SignUpViewControllerTests.swift in Sources */,

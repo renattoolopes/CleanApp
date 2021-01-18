@@ -12,7 +12,7 @@
         <!--Wellcome-->
         <scene sceneID="sK2-z3-VgS">
             <objects>
-                <viewController storyboardIdentifier="WellcomeViewController" id="mEG-EP-29g" userLabel="Wellcome" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WellcomeViewController" id="mEG-EP-29g" userLabel="Wellcome" customClass="WellcomeViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="87d-hf-vzF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +90,10 @@
                             <constraint firstItem="Uf2-JI-0Ka" firstAttribute="trailing" secondItem="Flq-2a-9U7" secondAttribute="trailing" constant="16" id="yXU-YV-Cpe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="43C-5p-hKl" id="htm-C4-JAG"/>
+                        <outlet property="signUpButton" destination="crt-1t-Tsv" id="jlR-Wn-ebf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIC-kh-ucx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
