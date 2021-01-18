@@ -27,7 +27,7 @@ class SignUpComposerTests: XCTestCase {
 extension SignUpComposerTests {
     private func makeSut(file: StaticString = #filePath, line: UInt = #line) -> (sut: SignUpViewController, addAccount: AddAccountSpy) {
         let addAccountSpy: AddAccountSpy = AddAccountSpy()
-        let sut = SignUpComposer.composeController(withAddAccount: MainQueueDispatchDecorator(addAccountSpy))
+        let sut = SingUpFactory.composeController(withAddAccount: MainQueueDispatchDecorator(addAccountSpy))
         checkMemoryLeak(for: sut, inFile: file, andLine: line)
         checkMemoryLeak(for: addAccountSpy, inFile: file, andLine: line)
         return (sut, addAccountSpy)

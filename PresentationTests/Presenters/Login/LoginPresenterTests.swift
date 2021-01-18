@@ -125,21 +125,3 @@ extension LoginPresenterTests {
         return sut
     }
 }
-
-class AuthenticationSpy: Authentication {
-    var authModel: AuthenticationModel?
-    var completion: Authentication.AuthenticationResult?
-    
-    func auth(with model: AuthenticationModel, completion: @escaping AuthenticationResult) {
-        authModel = model
-        self.completion = completion
-    }
-    
-    func completionWithError(_ error: DomainError) {
-        completion?(.failure(error))
-    }
-    
-    func ocmpletionWithSuccess(_ account: AccountModel) {
-        completion?(.success(account))
-    }
-}

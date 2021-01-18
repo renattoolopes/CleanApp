@@ -31,3 +31,10 @@ public class EmailValidation: Validation {
         return nil
     }
 }
+
+extension EmailValidation: Equatable {
+    public static func == (lhs: EmailValidation, rhs: EmailValidation) -> Bool {
+        return lhs.fieldName == rhs.fieldName && lhs.fieldLabel == rhs.fieldLabel
+    }
+    
+}

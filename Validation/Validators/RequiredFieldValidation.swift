@@ -26,3 +26,9 @@ public final class RequiredFieldValidation: Validation {
         return nil
     }
 }
+
+extension RequiredFieldValidation: Equatable {
+    public static func == (lhs: RequiredFieldValidation, rhs: RequiredFieldValidation) -> Bool {
+        return lhs.fieldName == rhs.fieldName && lhs.fieldLabel == rhs.fieldLabel
+    }
+}
