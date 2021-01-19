@@ -94,6 +94,7 @@
 		FDA80B0125243354008C690D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80B0025243354008C690D /* UIViewController+Extension.swift */; };
 		FDBD6632251827CE008AE445 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */; };
 		FDBD663625182955008AE445 /* URLProtocolStup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD663525182955008AE445 /* URLProtocolStup.swift */; };
+		FDCBF11F25B65A9700F27C8E /* WellcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCBF11E25B65A9700F27C8E /* WellcomeRouterTests.swift */; };
 		FDD27825252D42AC00CB1AAE /* RemoteAddAcountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD27824252D42AC00CB1AAE /* RemoteAddAcountFactory.swift */; };
 		FDD27840252D436900CB1AAE /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD2783F252D436800CB1AAE /* SignUpFactory.swift */; };
 		FDD2787F252D456F00CB1AAE /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A2F252408F3008C690D /* AddAccountSpy.swift */; };
@@ -414,6 +415,7 @@
 		FDA80B0025243354008C690D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		FDBD663525182955008AE445 /* URLProtocolStup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStup.swift; sourceTree = "<group>"; };
+		FDCBF11E25B65A9700F27C8E /* WellcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeRouterTests.swift; sourceTree = "<group>"; };
 		FDD27824252D42AC00CB1AAE /* RemoteAddAcountFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAcountFactory.swift; sourceTree = "<group>"; };
 		FDD2783F252D436800CB1AAE /* SignUpFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
 		FDD278D9252D495B00CB1AAE /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
@@ -799,6 +801,7 @@
 			isa = PBXGroup;
 			children = (
 				FD633A5525B5EAE1002E4AE3 /* WellcomeViewControllerTests.swift */,
+				FDCBF11E25B65A9700F27C8E /* WellcomeRouterTests.swift */,
 			);
 			path = Wellcome;
 			sourceTree = "<group>";
@@ -1922,6 +1925,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCBF11F25B65A9700F27C8E /* WellcomeRouterTests.swift in Sources */,
 				FD633A5625B5EAE1002E4AE3 /* WellcomeViewControllerTests.swift in Sources */,
 				FD2F4E9325B4EF8300E4A64F /* LoginViewControllerTests.swift in Sources */,
 				FDD278BF252D45AE00CB1AAE /* Extension+XCTestCase.swift in Sources */,
