@@ -12,28 +12,22 @@ import Presentation
 import Infra
 
 public func makeSignUpValidations() -> [Validation] {
-    let requiredName: RequiredFieldValidation = RequiredFieldValidation(fieldName: "name", fieldLabel: "Name")
-    let requiredEmail: RequiredFieldValidation = RequiredFieldValidation(fieldName: "email", fieldLabel: "Email")
-    let requiredPassword: RequiredFieldValidation = RequiredFieldValidation(fieldName: "password", fieldLabel: "Senha")
-    let requiredPasswordConfirmation: RequiredFieldValidation = RequiredFieldValidation(fieldName: "passwordConfirmation", fieldLabel: "Confirmar senha")
-    let comparePasswords: CompareFieldsValidation = CompareFieldsValidation(firstField: "password", secondField: "passwordConfirmation", fieldLabel: "Senha")
-    let emailValidation: EmailValidation = EmailValidation(fieldName: "email", fieldLabel: "Email", emailValidator: EmailValidatorAdapter())
+    if let email: [Validation] =  ValidationBuilder.field("email")?.label("Email").required().email().build(),
+       let password:  [Validation] = ValidationBuilder.field("password")?.label("Senha").required().build(),
+       let name: [Validation] = ValidationBuilder.field("name")?.label("Nome").required().build(),
+       let confirmationPassword:  [Validation] = ValidationBuilder.field("password")?.secondField("passwordConfirmation").label("Senha").compare().build() {
+        return name + email + password + confirmationPassword // return array of validations
+    }
     
-    
-    return [
-        requiredName,
-        requiredEmail,
-        requiredPassword,
-        requiredPasswordConfirmation,
-        comparePasswords,
-        emailValidation
-    ]
+    return []
 }
 
 public func makeLoginValidations() -> [Validation] {
-    let emailRequired: RequiredFieldValidation = RequiredFieldValidation(fieldName: "email", fieldLabel: "Email")
-    let passwordRequired: RequiredFieldValidation = RequiredFieldValidation(fieldName: "password", fieldLabel: "Senha")
-    let emailValidation: EmailValidation = EmailValidation(fieldName: "email", fieldLabel: "Email", emailValidator: EmailValidatorAdapter())
     
-    return [emailRequired, passwordRequired, emailValidation]
+    if let email =  ValidationBuilder.field("email")?.label("Email").required().email().build(),
+       let password = ValidationBuilder.field("password")?.label("Senha").required().build() {
+        return email + password // return array of validations
+    }
+    
+    return []
 }

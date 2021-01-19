@@ -97,6 +97,7 @@
 		FDCBF11F25B65A9700F27C8E /* WellcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCBF11E25B65A9700F27C8E /* WellcomeRouterTests.swift */; };
 		FDCBF12D25B6601A00F27C8E /* WellcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCBF12C25B6601A00F27C8E /* WellcomeRouter.swift */; };
 		FDCBF14725B66B4700F27C8E /* WellcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCBF14625B66B4700F27C8E /* WellcomeControllerFactory.swift */; };
+		FDCBF15625B66D4600F27C8E /* ValidationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCBF15525B66D4600F27C8E /* ValidationBuilder.swift */; };
 		FDD27825252D42AC00CB1AAE /* RemoteAddAcountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD27824252D42AC00CB1AAE /* RemoteAddAcountFactory.swift */; };
 		FDD27840252D436900CB1AAE /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD2783F252D436800CB1AAE /* SignUpFactory.swift */; };
 		FDD2787F252D456F00CB1AAE /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A2F252408F3008C690D /* AddAccountSpy.swift */; };
@@ -420,6 +421,7 @@
 		FDCBF11E25B65A9700F27C8E /* WellcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeRouterTests.swift; sourceTree = "<group>"; };
 		FDCBF12C25B6601A00F27C8E /* WellcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeRouter.swift; sourceTree = "<group>"; };
 		FDCBF14625B66B4700F27C8E /* WellcomeControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeControllerFactory.swift; sourceTree = "<group>"; };
+		FDCBF15525B66D4600F27C8E /* ValidationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationBuilder.swift; sourceTree = "<group>"; };
 		FDD27824252D42AC00CB1AAE /* RemoteAddAcountFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAcountFactory.swift; sourceTree = "<group>"; };
 		FDD2783F252D436800CB1AAE /* SignUpFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
 		FDD278D9252D495B00CB1AAE /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
@@ -882,6 +884,7 @@
 		FD9F0299252553730048D3A4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FDCBF15425B66D2E00F27C8E /* Builders */,
 				FDD279A5252D712000CB1AAE /* Decorators */,
 				FDD278F3252D585400CB1AAE /* Env */,
 				FDD278D8252D494800CB1AAE /* Proxies */,
@@ -1023,6 +1026,14 @@
 				FDBD663525182955008AE445 /* URLProtocolStup.swift */,
 			);
 			path = Http;
+			sourceTree = "<group>";
+		};
+		FDCBF15425B66D2E00F27C8E /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				FDCBF15525B66D4600F27C8E /* ValidationBuilder.swift */,
+			);
+			path = Builders;
 			sourceTree = "<group>";
 		};
 		FDD2783E252D435700CB1AAE /* Factories */ = {
@@ -1873,6 +1884,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCBF15625B66D4600F27C8E /* ValidationBuilder.swift in Sources */,
 				FDD27825252D42AC00CB1AAE /* RemoteAddAcountFactory.swift in Sources */,
 				FDD279A7252D712600CB1AAE /* MainQueueDispatchDecorator.swift in Sources */,
 				FDD2790F252D594200CB1AAE /* Environment.swift in Sources */,
