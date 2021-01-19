@@ -11,13 +11,12 @@ import UI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let navigation: NavigationController = NavigationController()
-        let controller: SignUpViewController = SingUpFactory.composeController(withAddAccount: makeRemoteAddAccount())
-        navigation.setRootViewController(controller)
+        navigation.setRootViewController(WellcomeControllerFactory.composeController(navigation: navigation))
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
     }

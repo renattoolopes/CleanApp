@@ -10,31 +10,6 @@ import XCTest
 import UIKit
 import UI
 
-
-public final class WellcomeRouter {
-    private let nav: NavigationController
-    private let loginFactory: () -> LoginViewController
-    private let signUpFactory: () -> SignUpViewController
-
-    public init(nav: NavigationController,
-                loginFactory: @escaping () -> LoginViewController,
-                signUpFactory: @escaping () -> SignUpViewController) {
-        self.nav = nav
-        self.loginFactory = loginFactory
-        self.signUpFactory = signUpFactory
-    }
-    
-    public func gotoLogin() {
-        let controller: LoginViewController = loginFactory()
-        nav.push(viewController: controller)
-    }
-    
-    public func gotoSignUp() {
-        let controller: SignUpViewController = signUpFactory()
-        nav.push(viewController: controller)
-    }
-}
-
 class WellcomeRouterTests: XCTestCase {
     func test_go_to_login_calls_correct_controller() {
         let (sut, nav) = makeSut()

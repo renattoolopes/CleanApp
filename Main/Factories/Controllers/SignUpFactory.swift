@@ -15,6 +15,14 @@ import Presentation
 import Validation
 
 public final class SingUpFactory {
+    public static func composeController() -> SignUpViewController {
+        let controller: SignUpViewController = try! SignUpViewController.instantiate()
+        let proxy: WeakVarProxy = WeakVarProxy(controller)
+        let presenter: SignUpPresenter =  SignUpPresenter(alertView: proxy, addAccount: makeRemoteAddAccount(), loadingView: proxy, validation: ValidationComposite(validations: makeSignUpValidations()))
+        controller.signUp = presenter.signUp
+        return controller
+    }
+    
     public static func composeController(withAddAccount addAccount: AddAccount) -> SignUpViewController {
         let controller: SignUpViewController = try! SignUpViewController.instantiate()
         let proxy: WeakVarProxy = WeakVarProxy(controller)
@@ -22,6 +30,4 @@ public final class SingUpFactory {
         controller.signUp = presenter.signUp
         return controller
     }
-    
-
 }

@@ -27,4 +27,11 @@ extension UIViewController {
     private func closeKeyboard() {
         view.endEditing(true)
     }
+    
+    public func hideNavBackButtonText() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: nil,
+                                                           style: .plain,
+                                                           target: nil,
+                                                           action: nil)
+    }
 }

@@ -15,6 +15,15 @@ import Presentation
 import Validation
 
 public final class LoginControllerFactory {
+    public static func composeController() -> LoginViewController {
+        let controller: LoginViewController = try! LoginViewController.instantiate()
+        let proxy: WeakVarProxy = WeakVarProxy(controller)
+        let presenter: LoginPresenter = LoginPresenter(alertView: proxy, authentication: makeRemoteAuthenticationFactory(), loadingView: proxy, validation: ValidationComposite(validations: makeLoginValidations()))
+            
+        controller.loginEvent = presenter.login
+        return controller
+    }
+    
     public static func composeController(withAuth authentication: Authentication) -> LoginViewController {
         let controller: LoginViewController = try! LoginViewController.instantiate()
         let proxy: WeakVarProxy = WeakVarProxy(controller)

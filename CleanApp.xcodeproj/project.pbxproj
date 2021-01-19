@@ -95,6 +95,8 @@
 		FDBD6632251827CE008AE445 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */; };
 		FDBD663625182955008AE445 /* URLProtocolStup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD663525182955008AE445 /* URLProtocolStup.swift */; };
 		FDCBF11F25B65A9700F27C8E /* WellcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCBF11E25B65A9700F27C8E /* WellcomeRouterTests.swift */; };
+		FDCBF12D25B6601A00F27C8E /* WellcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCBF12C25B6601A00F27C8E /* WellcomeRouter.swift */; };
+		FDCBF14725B66B4700F27C8E /* WellcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCBF14625B66B4700F27C8E /* WellcomeControllerFactory.swift */; };
 		FDD27825252D42AC00CB1AAE /* RemoteAddAcountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD27824252D42AC00CB1AAE /* RemoteAddAcountFactory.swift */; };
 		FDD27840252D436900CB1AAE /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD2783F252D436800CB1AAE /* SignUpFactory.swift */; };
 		FDD2787F252D456F00CB1AAE /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA80A2F252408F3008C690D /* AddAccountSpy.swift */; };
@@ -416,6 +418,8 @@
 		FDBD6631251827CE008AE445 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		FDBD663525182955008AE445 /* URLProtocolStup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStup.swift; sourceTree = "<group>"; };
 		FDCBF11E25B65A9700F27C8E /* WellcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeRouterTests.swift; sourceTree = "<group>"; };
+		FDCBF12C25B6601A00F27C8E /* WellcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeRouter.swift; sourceTree = "<group>"; };
+		FDCBF14625B66B4700F27C8E /* WellcomeControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeControllerFactory.swift; sourceTree = "<group>"; };
 		FDD27824252D42AC00CB1AAE /* RemoteAddAcountFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAcountFactory.swift; sourceTree = "<group>"; };
 		FDD2783F252D436800CB1AAE /* SignUpFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
 		FDD278D9252D495B00CB1AAE /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
@@ -653,13 +657,14 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
-		FD2F4F3E25B4FE2B00E4A64F /* View */ = {
+		FD2F4F3E25B4FE2B00E4A64F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				FDD2783F252D436800CB1AAE /* SignUpFactory.swift */,
 				FD2F4F8125B5059100E4A64F /* LoginControllerFactory.swift */,
+				FDCBF14625B66B4700F27C8E /* WellcomeControllerFactory.swift */,
 			);
-			path = View;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		FD3212E62522B50700EE0B9E /* SignUp */ = {
@@ -793,6 +798,7 @@
 			children = (
 				FD633A4625B5E815002E4AE3 /* Wellcome.storyboard */,
 				FD633A6F25B5EBFC002E4AE3 /* WellcomeViewController.swift */,
+				FDCBF12C25B6601A00F27C8E /* WellcomeRouter.swift */,
 			);
 			path = Wellcome;
 			sourceTree = "<group>";
@@ -1022,7 +1028,7 @@
 		FDD2783E252D435700CB1AAE /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				FD2F4F3E25B4FE2B00E4A64F /* View */,
+				FD2F4F3E25B4FE2B00E4A64F /* Controllers */,
 				FD2F4F3D25B4FE2300E4A64F /* Validation */,
 				FD2F4F0825B4FC1800E4A64F /* UseCases */,
 				FD2F4F0725B4FC1300E4A64F /* Http */,
@@ -1877,6 +1883,7 @@
 				FD2F4F0A25B4FC4900E4A64F /* EndpointFactory.swift in Sources */,
 				FD2F4F8225B5059100E4A64F /* LoginControllerFactory.swift in Sources */,
 				FD2F4ED625B4FBC300E4A64F /* ValidationFactory.swift in Sources */,
+				FDCBF14725B66B4700F27C8E /* WellcomeControllerFactory.swift in Sources */,
 				FDD278DA252D495B00CB1AAE /* WeakVarProxy.swift in Sources */,
 				FDD27840252D436900CB1AAE /* SignUpFactory.swift in Sources */,
 			);
@@ -1914,6 +1921,7 @@
 				FD111FE425AD41A20051576A /* NavigationController.swift in Sources */,
 				FD111FAD25AD3D220051576A /* UIColor+Extensions.swift in Sources */,
 				FDA80ABD252413CC008C690D /* SignUpViewController.swift in Sources */,
+				FDCBF12D25B6601A00F27C8E /* WellcomeRouter.swift in Sources */,
 				FD111F9F25AD3C530051576A /* UIView+Extensions.swift in Sources */,
 				FD111FCA25AD40170051576A /* RoundedTextField.swift in Sources */,
 				FD9F021A2525439C0048D3A4 /* Storyborded.swift in Sources */,

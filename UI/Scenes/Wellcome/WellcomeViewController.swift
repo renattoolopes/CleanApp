@@ -34,6 +34,7 @@ public final class WellcomeViewController: UIViewController, Storyborded {
     private func style() {
         title = "4Devs"
         loginButton.rounded(withRadius: 8, andColor: .clear)
+        signUpButton.rounded(withRadius: 8, andColor: .clear)
     }
     
     @objc

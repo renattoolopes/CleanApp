@@ -36,9 +36,11 @@ public final class NavigationController: UINavigationController {
     
     public func setRootViewController(_ controller: UIViewController) {
         setViewControllers([controller], animated: true)
+        controller.hideNavBackButtonText()
     }
     
     public func push(viewController: UIViewController) {
         pushViewController(viewController, animated: true)
+        viewController.hideNavBackButtonText()
     }
 }
